@@ -2,12 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/** Components */
 @layer components {
 	.main {
 		@apply max-w-7xl w-full mt-12;
 	}
 }
 
+/** Typography */
+@layer components {
+	.title {
+		@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+	}
+	.heading {
+		@apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+	}
+	.subheading {
+		@apply scroll-m-20 text-2xl font-semibold tracking-tight;
+	}
+	.subsubheading {
+		@apply scroll-m-20 text-xl font-semibold tracking-tight;
+	}
+	.paragraph {
+		@apply leading-7 [&:not(:first-child)]:mt-6;
+	}
+	.blockquote {
+		@apply mt-6 border-l-2 pl-6 italic;
+	}
+	.list {
+		@apply my-6 ml-6 list-disc [&>li]:mt-2;
+	}
+	.xs {
+		@apply text-sm font-medium leading-none;
+	}
+}
+
+/** Colors */
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -72,6 +102,7 @@
 	}
 }
 
+/** Basics */
 @layer base {
 	* {
 		@apply border-border;

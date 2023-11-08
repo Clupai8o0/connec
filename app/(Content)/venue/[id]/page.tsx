@@ -19,10 +19,10 @@ async function Venue({ params: { id } }: { params: { id: string } }) {
 	return (
 		<main className="main">
 			<Gallery imgs={venue.imgs} />
-      
+
 			<div className="flex mt-12">
 				<div className="w-full md:w-1/2">
-					{/* Title */}
+					<h1 className="title">{venue.title}</h1>
 					{/* Owner / Profile */}
 					{/* Description - Markdown */}
 					{/* Heading - Location */}
