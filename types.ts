@@ -1,9 +1,7 @@
-import type { v4 } from "uuid";
-
 export interface Venue {
-	id: typeof v4;
+	id: string;
 	owner: {
-		id: typeof v4;
+		id: string;
 		name: string;
 		title: string;
 	}; //! this is temporary btw
@@ -25,7 +23,7 @@ export type Location = {
 };
 
 export type Image = {
-	id: typeof v4;
+	id: string;
 	src: string;
 	alt: string;
 };
@@ -37,7 +35,7 @@ export type Price = {
 
 export type Review = {
   user: { //! this is temporary
-    id: typeof v4;
+    id: string;
     name: string;
     title: string;
   },
