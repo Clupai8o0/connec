@@ -1,3 +1,4 @@
+import { generateKey } from "@/lib/api";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { FaStarHalfStroke } from "react-icons/fa6";
 
@@ -21,11 +22,11 @@ const Rating = ({ stars }: Props) => {
 		<div className="flex">
 			{starsList.map((star) =>
 				star === 1 ? (
-					<FaStar />
+					<FaStar key={generateKey()} />
 				) : star === 0 ? (
-					<FaRegStar />
+					<FaRegStar key={generateKey()} />
 				) : (
-					<FaStarHalfStroke />
+					<FaStarHalfStroke key={generateKey()} />
 				)
 			)}
 		</div>
