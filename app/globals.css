@@ -5,7 +5,7 @@
 /** Components */
 @layer components {
 	.main {
-		@apply max-w-7xl w-full mt-12;
+		@apply max-w-7xl w-full mt-6 relative px-6 xl:px-0;
 	}
 }
 
@@ -15,7 +15,7 @@
 		@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
 	}
 	.heading {
-		@apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+		@apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight;
 	}
 	.subheading {
 		@apply scroll-m-20 text-2xl font-semibold tracking-tight;
@@ -32,8 +32,14 @@
 	.list {
 		@apply my-6 ml-6 list-disc [&>li]:mt-2;
 	}
-	.xs {
+	.large {
+		@apply text-lg font-semibold;
+	}
+	.small {
 		@apply text-sm font-medium leading-none;
+	}
+	.muted {
+		@apply text-sm text-muted-foreground;
 	}
 }
 
@@ -109,5 +115,20 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+
+	.markdown h1,
+	.markdown h2,
+	.markdown h3 {
+		@apply scroll-m-20 text-xl font-semibold tracking-tight mt-6;
+	}
+	.markdown p {
+		@apply leading-7 [&:not(:first-child)]:mt-4;
+	}
+	.markdown ul {
+		@apply my-6 ml-6 list-disc [&>li]:mt-2;
+	}
+	.markdown img {
+		@apply my-4 rounded-xl;
 	}
 }

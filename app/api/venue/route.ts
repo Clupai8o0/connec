@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
 		// note: this is only dummy data for now, we will be getting the data from microsoft azure somehow
 		const data = {
 			id: generateKey(),
-			owners: {
+			owner: {
 				id: generateKey(),
 				name: "Jennifer Sterling",
 				title: "President and CEO",
@@ -32,7 +32,7 @@ At EliteVenue Stadium, we pride ourselves on transforming your dreams into extra
 
 Our state-of-the-art amenities and impeccable services ensure that your event unfolds seamlessly. From spacious seating arrangements and cutting-edge audio-visual technology to well-maintained turf and a variety of culinary options, we've thought of everything to create a memorable experience for you and your guests.
 
-# A Subheading
+## A Subheading
 
 What truly sets EliteVenue Stadium apart is our commitment to exceeding expectations. Our dedicated team is here to assist you every step of the way, from event planning and logistics to execution, ensuring that every moment is as extraordinary as the next. The possibilities are endless at EliteVenue Stadium, where dreams take the center stage and turn into cherished realities.
 
@@ -67,12 +67,13 @@ Unleash the possibilities, book EliteVenue Stadium, and let your dreams take fli
 				},
 			],
 			location: {
-				google: `<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3477.651113092308!2d50.572061211229006!3d26.211181489289192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49af14f7389d1d%3A0x18da6ea2b6728982!2sNew%20Millennium%20School%20Bahrain!5e0!3m2!1sen!2sbh!4v1699447907079!5m2!1sen!2sbh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+				google:
+					"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3477.651113092308!2d50.572061211229006!3d26.211181489289192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49af14f7389d1d%3A0x18da6ea2b6728982!2sNew%20Millennium%20School%20Bahrain!5e0!3m2!1sen!2sbh!4v1699447907079!5m2!1sen!2sbh",
 			},
 			package: {
 				title: "SpectraFields Event Rental Package",
 				price: {
-					per: "hour",
+					per: "hr",
 					value: "$1,500",
 				},
 				desc: `- *Exclusive Venue Access:* Secure exclusive access to SpectraFields, ensuring your event is the center of attention.
@@ -81,13 +82,7 @@ Unleash the possibilities, book EliteVenue Stadium, and let your dreams take fli
 
 - *Meticulously Maintained Venue:* Enjoy our well-manicured turf and top-notch facilities that set the stage for an exceptional event.
 
-- *Professional Event Staff:* Our experienced event professionals will assist you from planning to execution, ensuring your event runs smoothly.
-
-- *State-of-the-Art Audio-Visual Equipment:* Benefit from our high-quality sound and lighting systems to enhance your event's atmosphere.
-
-- *Catering and Hospitality Services:* We can arrange catering services, from casual to fine dining, tailored to your preferences.
-
-- *Ample Seating Options:* Accommodate your guests with a variety of seating configurations and options to suit your event style.`,
+- *Professional Event Staff:* Our experienced event professionals will assist you from planning to execution, ensuring your event runs smoothly.`
 			}, //? for now let's only allow for one package
 			reviews: [
 				{
@@ -97,7 +92,7 @@ Unleash the possibilities, book EliteVenue Stadium, and let your dreams take fli
 						name: "Sarah Mitchell",
 						title: "Event Planner",
 					},
-					stars: 5,
+					stars: 3.5,
 					subject: "An Unforgettable Event Experience at SpectraFields",
 					body: "I recently had the pleasure of hosting an event at SpectraFields, and it was an absolute dream come true! The venue's flexibility in terms of seating arrangements and the impeccable maintenance of the turf truly made a significant difference in creating a memorable atmosphere. Jennifer and her team went above and beyond to ensure our event was a success. The state-of-the-art audio-visual equipment added a special touch, and their professional event staff was there at every turn, making sure everything ran smoothly. Our client was delighted, and so were we. SpectraFields truly lives up to its name as a place where dreams take center stage. We can't wait to plan our next event here!",
 				},

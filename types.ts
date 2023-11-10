@@ -9,11 +9,7 @@ export interface Venue {
 	desc: string;
 	imgs: Image[];
 	location: Location;
-	package: {
-		title: string;
-		price: Price;
-    desc: string;
-	};
+	package: Package;
   reviews: Review[]
 }
 
@@ -29,8 +25,8 @@ export type Image = {
 };
 
 export type Price = {
-	per: "day" | "hour" | "night" | "week";
-  price: string;
+	per: "day" | "hr" | "night" | "week";
+  value: string;
 };
 
 export type Review = {
@@ -43,3 +39,9 @@ export type Review = {
   subject: string;
   body: string;
 }
+
+export type Package = {
+	title: string;
+	price: Price;
+	desc: string;
+};
