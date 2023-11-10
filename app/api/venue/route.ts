@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NextRequest } from "next/server";
 
 import { generateKey, handleError, handleSuccess } from "@/lib/api";
@@ -82,7 +84,7 @@ Unleash the possibilities, book EliteVenue Stadium, and let your dreams take fli
 
 - *Meticulously Maintained Venue:* Enjoy our well-manicured turf and top-notch facilities that set the stage for an exceptional event.
 
-- *Professional Event Staff:* Our experienced event professionals will assist you from planning to execution, ensuring your event runs smoothly.`
+- *Professional Event Staff:* Our experienced event professionals will assist you from planning to execution, ensuring your event runs smoothly.`,
 			}, //? for now let's only allow for one package
 			reviews: [
 				{
