@@ -8,7 +8,7 @@ import Markdown from "@/components/content/Markdown";
 import Package from "@/components/content/Package";
 
 async function getVenue(id: string) {
-	const resp = await fetch(`${process.env.SERVER}api/venue?id=${id}`, {
+	const resp = await fetch(`${process.env.NEXT_PUBLIC_SERVER}api/venue?id=${id}`, {
 		// cache: process.env.status === "DEV" ? "no-store" : "default",
 		cache: "no-store",
 	});
