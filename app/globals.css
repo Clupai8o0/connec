@@ -5,7 +5,7 @@
 /** Components */
 @layer components {
 	.main {
-		@apply max-w-7xl w-full mt-6 relative px-6 xl:px-0;
+		@apply max-w-7xl w-full mt-6 relative px-6 xl:px-0
 	}
 }
 
