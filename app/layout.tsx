@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,17 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
+				<NextTopLoader
+					color="#2563eb"
+					initialPosition={0.08}
+					crawlSpeed={200}
+					height={3}
+					crawl={true}
+					showSpinner={false}
+					easing="ease"
+					speed={200}
+				/>
+
 				<Navbar />
 				<div className="w-full flex justify-center">{children}</div>
 				<Footer />
