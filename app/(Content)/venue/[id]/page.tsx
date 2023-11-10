@@ -27,26 +27,27 @@ async function Venue({ params: { id } }: { params: { id: string } }) {
 	//todo: also level this up like airbnb's got
 	return (
 		<main className="main">
-			<Gallery imgs={venue.imgs} />
+			{(venue !== null) ? "Venue exists" : "nop not received"}
+			{/* <Gallery imgs={venue.imgs} />
 
-			<div className="flex flex-col lg:flex-row gap-8">
+			<div className="flex flex-col lg:flex-row gap-8"> */}
 				{/* //todo: missing an average review and other details */}
-				<div className="w-full md:w-2/3">
-					<h1 className="title mt-12 mb-6">{venue.title}</h1>
+				{/* <div className="w-full md:w-2/3">
+					<h1 className="title mt-12 mb-6">{venue.title}</h1> */}
 					{/* <Profile name={venue.owner.name} title={venue.owner.title} /> */}
 
-					<Markdown content={venue.desc} />
+					{/* <Markdown content={venue.desc} />
 
 					<h1 className="heading mt-12 mb-6">Location</h1>
 					<Map {...venue.location} />
 
 					<Reviews reviews={venue.reviews} />
 				</div>
-				<div className="w-full md:w-1/3 pt-12">
+				<div className="w-full md:w-1/3 pt-12"> */}
 					{/* //todo: need to make this mobile easy to use */}
-					<Package {...venue.package} />
+					{/* <Package {...venue.package} />
 				</div>
-			</div>
+			</div> */}
 		</main>
 	);
 }
