@@ -32,7 +32,7 @@ async function Venue({ params: { id } }: { params: { id: string } }) {
 				{/* //todo: missing an average review and other details */}
 				<div className="w-full md:w-2/3">
 					<h1 className="title mt-12 mb-6">{venue.title}</h1>
-					<Profile name={venue.owner.name} title={venue.owner.title} />
+					{/* <Profile name={venue.owner.name} title={venue.owner.title} /> */}
 
 					<Markdown content={venue.desc} />
 
