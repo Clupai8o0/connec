@@ -53,3 +53,5 @@ async function Venue({ params: { id } }: { params: { id: string } }) {
 }
 
 export default Venue;
+
+export const dynamic = "force-dynamic"
