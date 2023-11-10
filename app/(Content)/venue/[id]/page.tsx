@@ -20,8 +20,8 @@ async function Venue({ params: { id } }: { params: { id: string } }) {
 	const venue: Venue = await getVenue(id);
 
 	//todo need to make a way to handle the situation where the venue doesn't exist
-	// rather simple but im lazy so...
-	if (!venue) throw new Error("Given venue doesn't exist");
+	// rather simple but im lazy so
+	// if (!venue) throw new Error("Given venue doesn't exist");
 
 	//todo: also for mobile view, need a way to quickly access the package part, table of content?
 	//todo: also level this up like airbnb's got
