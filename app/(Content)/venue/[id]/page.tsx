@@ -27,7 +27,7 @@ async function Venue({ params: { id } }: { params: { id: string } }) {
 	//todo: also level this up like airbnb's got
 	return (
 		<main className="main">
-			{(venue !== null) ? "Venue exists" : "nop not received"}
+			{JSON.stringify(venue)}
 			{/* <Gallery imgs={venue.imgs} />
 
 			<div className="flex flex-col lg:flex-row gap-8"> */}
