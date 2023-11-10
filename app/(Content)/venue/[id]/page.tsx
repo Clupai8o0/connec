@@ -9,7 +9,8 @@ import Package from "@/components/content/Package";
 
 async function getVenue(id: string) {
 	const resp = await fetch(`${process.env.SERVER}api/venue?id=${id}`, {
-		cache: process.env.status === "DEV" ? "no-store" : "default",
+		// cache: process.env.status === "DEV" ? "no-store" : "default",
+		cache: "no-store",
 	});
 	const data = await resp.json();
 	return data.data;
