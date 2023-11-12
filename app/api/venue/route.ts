@@ -1,3 +1,4 @@
+//todo: get rid of this after static paths are done
 export const dynamic = "force-dynamic";
 
 import { NextRequest } from "next/server";

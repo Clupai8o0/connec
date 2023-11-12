@@ -1,4 +1,4 @@
-export interface Venue {
+export type Venue = {
 	id: string;
 	owner: {
 		id: string;
@@ -12,6 +12,34 @@ export interface Venue {
 	package: Package;
   reviews: Review[]
 }
+export type Event = {
+	id: string;
+	owner: {
+		id: string;
+		name: string;
+		title: string;
+	}; //! this is temporary btw
+	title: string;
+	desc: string;
+	imgs: Image[];
+	location: Location;
+	package: Package;
+	reviews: Review[];
+};
+export type Service = {
+	id: string;
+	owner: {
+		id: string;
+		name: string;
+		title: string;
+	}; //! this is temporary btw
+	title: string;
+	desc: string;
+	imgs: Image[];
+	location: Location;
+	package: Package;
+	reviews: Review[];
+};
 
 export type Location = {
 	//! this is also temporary

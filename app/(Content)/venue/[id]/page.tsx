@@ -19,7 +19,7 @@ async function getVenue(id: string) {
 	return data.data;
 }
 
-async function Venue({ params: { id } }: { params: { id: string } }) {
+async function VenuePage({ params: { id } }: { params: { id: string } }) {
 	const venue: Venue = await getVenue(id);
 
 	//todo need to make a way to handle the situation where the venue doesn't exist
@@ -54,6 +54,7 @@ async function Venue({ params: { id } }: { params: { id: string } }) {
 	);
 }
 
-export default Venue;
+export default VenuePage;
 
+//todo: get rid of this after static paths are done
 export const dynamic = "force-dynamic";
