@@ -1,10 +1,21 @@
-import React from "react";
+import {
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuIndicator,
+	NavigationMenuItem,
+	NavigationMenuLink,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+	NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
+//todo: do this rather complicated but fun
+
 import { Button } from "../ui/button";
 
 const Navbar = () => {
 	return (
-		<div className="w-full flex justify-center">
-			<nav className="max-w-7xl w-full h-20 flex items-center border-b border-gray-400">
+		<div className="w-full flex justify-center relative z-50 dark">
+			<nav className="max-w-7xl w-full h-20 flex items-center justify-between absolute">
 				{/* //todo: maybe move this logo somewhere more quieter */}
 				<div>
 					<svg
@@ -56,14 +67,14 @@ const Navbar = () => {
 				</div>
 
 				<div>
-					<Button variant="ghost">Event</Button>
-					<Button variant="ghost">Services</Button>
-					<Button variant="ghost">Venues</Button>
-					<Button variant="ghost">Guides</Button>
+					<Button variant="link">Event</Button>
+					<Button variant="link">Services</Button>
+					<Button variant="link">Venues</Button>
+					<Button variant="link">Guides</Button>
 				</div>
 
 				<div>
-					<Button variant="ghost">Login</Button>
+					<Button variant="link">Login</Button>
 					<Button>Get Started</Button>
 				</div>
 			</nav>

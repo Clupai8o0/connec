@@ -11,6 +11,9 @@
 
 /** Typography */
 @layer components {
+	.hero {
+		@apply scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-6xl;
+	}
 	.title {
 		@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
 	}

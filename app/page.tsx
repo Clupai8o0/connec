@@ -8,7 +8,7 @@ import Testimonials from "@/components/content/Testimonials";
 
 export default function Home() {
 	return (
-		<main className="main">
+		<main className="w-full h-full relative">
 			<Hero />
 			<Sponsors />
 			<JumbotronCards />

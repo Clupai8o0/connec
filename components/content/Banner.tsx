@@ -8,7 +8,7 @@ const Banner = () => {
 
 	return (
 		showBanner && (
-			<div className="flex gap-8 justify-between items-start py-2 px-4 w-full border border-b sm:items-center bg-primary">
+			<div className="flex gap-8 justify-between items-start py-2 px-4 w-full sm:items-center bg-primary">
 				<div className="w-full flex justify-center">
 					<p className="text-sm text-white font-semibold">{banner.content}</p>
 				</div>
