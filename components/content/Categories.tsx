@@ -14,10 +14,10 @@ async function getCategories(type: CategoryType) {
 }
 
 const Categories = async () => {
-  //todo: need to give these proper types
-  const events: any[] = await getCategories(CategoryType.Events);
-  const services: any[] = await getCategories(CategoryType.Services);
-  const venues: any[] = await getCategories(CategoryType.Venues);
+	//todo: need to give these proper types
+	const events: any[] = await getCategories(CategoryType.Events);
+	const services: any[] = await getCategories(CategoryType.Services);
+	const venues: any[] = await getCategories(CategoryType.Venues);
 
 	return (
 		<div className="main">
@@ -34,7 +34,10 @@ const Categories = async () => {
 							event: any //todo: need to give this proper types for safety
 						) => (
 							//todo: also this is supposed to be a link to categories page, but I'm not sure of implementing that yet
-							<div className="flex flex-col items-center rounded-xl py-8 cursor-pointer hover:bg-gray-100">
+							<div
+								className="flex flex-col items-center rounded-xl py-8 cursor-pointer hover:bg-gray-100"
+								key={generateKey()}
+							>
 								<Image
 									src={event.icon.src}
 									height={64}
@@ -60,7 +63,10 @@ const Categories = async () => {
 							service: any //todo: need to give this proper types for safety
 						) => (
 							//todo: also this is supposed to be a link to categories page, but I'm not sure of implementing that yet
-							<div className="flex flex-col items-center rounded-xl py-8 cursor-pointer hover:bg-gray-100">
+							<div
+								className="flex flex-col items-center rounded-xl py-8 cursor-pointer hover:bg-gray-100"
+								key={generateKey()}
+							>
 								<Image
 									src={service.icon.src}
 									height={64}
@@ -85,7 +91,10 @@ const Categories = async () => {
 							venue: any //todo: need to give this proper types for safety
 						) => (
 							//todo: also this is supposed to be a link to categories page, but I'm not sure of implementing that yet
-							<div className="flex flex-col items-center rounded-xl py-8 cursor-pointer hover:bg-gray-100">
+							<div
+								className="flex flex-col items-center rounded-xl py-8 cursor-pointer hover:bg-gray-100"
+								key={generateKey()}
+							>
 								<Image
 									src={venue.icon.src}
 									height={64}
