@@ -1,3 +1,6 @@
+//todo: get rid of this eventually
+export const dynamic = "force-dynamic"
+
 import { NextRequest } from "next/server";
 
 import { handleError, handleSuccess } from "@/lib/api";

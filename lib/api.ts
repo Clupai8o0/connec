@@ -22,7 +22,7 @@ export const handleSuccess = (msg: string, data?: any, status?: any) => {
 	});
 };
 export const handleError = (msg: string, err?: any, status?: any) => {
-	console.log(colors.underline(colors.red(`✅ ${msg}`)));
+	console.log(colors.underline(colors.red(`❌ ${msg}`)));
 	console.error(colors.magenta(err));
 
 	return NextResponse.json(response(false, msg, err.message), {
