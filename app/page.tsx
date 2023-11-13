@@ -20,7 +20,7 @@ export default function Home() {
 			<Sponsors />
 			<JumbotronCards />
 			<Featured />
-			<Categories />
+			{/* <Categories /> */}
 			<Testimonials />
 			<Guides />
 			<FAQs />
