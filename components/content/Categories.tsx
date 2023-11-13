@@ -113,3 +113,6 @@ const Categories = async () => {
 };
 
 export default Categories;
+
+//todo: get rid of this
+export const dynamic = "force-dynamic"
