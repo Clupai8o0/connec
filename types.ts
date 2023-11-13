@@ -10,8 +10,8 @@ export type Venue = {
 	imgs: Image[];
 	location: Location;
 	package: Package;
-  reviews: Review[]
-}
+	reviews: Review[];
+};
 export type Event = {
 	id: string;
 	owner: {
@@ -54,22 +54,29 @@ export type Image = {
 
 export type Price = {
 	per: "day" | "hr" | "night" | "week";
-  value: string;
+	value: string;
 };
 
 export type Review = {
-  user: { //! this is temporary
-    id: string;
-    name: string;
-    title: string;
-  },
-  stars: number;
-  subject: string;
-  body: string;
-}
+	user: {
+		//! this is temporary
+		id: string;
+		name: string;
+		title: string;
+	};
+	stars: number;
+	subject: string;
+	body: string;
+};
 
 export type Package = {
 	title: string;
 	price: Price;
 	desc: string;
 };
+
+export enum CategoryType {
+	Events = "events",
+	Services = "services",
+	Venues = "venues",
+}
