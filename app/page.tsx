@@ -12,6 +12,7 @@ import Testimonials from "@/components/content/Testimonials";
 // todo: also we need a one shortcut all solutions thing
 //todo: also the scrollbar
 //todo: also its missing the important venues services and events thing but lets decide that later
+//todo: also missing the loading (that thing I forgot the name) animation transition
 
 export default function Home() {
 	return (
