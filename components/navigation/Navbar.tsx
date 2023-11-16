@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -12,9 +14,34 @@ import {
 
 import { Button } from "../ui/button";
 
-const Navbar = () => {
+import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
+import Link from "next/link";
+
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+// const darkModePages = ["/"];
+
+interface Props {
+	darkMode?: boolean;
+}
+
+const Navbar = ({ darkMode }: Props) => {
+	// const [darkMode, setDarkMode] = useState(false);
+	// const pathname = usePathname();
+
+	// useEffect(() => {
+	// 	darkModePages.forEach((path) => {
+	// 		if (pathname === path) setDarkMode(true);
+	// 	});
+	// }, []);
+
 	return (
-		<div className="w-full flex justify-center relative z-50 dark">
+		<div
+			className={`w-full flex justify-center relative z-50 ${
+				darkMode && "dark"
+			}`}
+		>
 			<nav className="max-w-7xl w-full h-20 flex items-center justify-between absolute">
 				{/* //todo: maybe move this logo somewhere more quieter */}
 				<div>
@@ -58,8 +85,8 @@ const Navbar = () => {
 							fill="#3061DF"
 						/>
 						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
+							fillRule="evenodd"
+							clipRule="evenodd"
 							d="M40.56 17.5041H13.56V9.50411H40.56V17.5041Z"
 							fill="#3061DF"
 						/>
@@ -73,9 +100,22 @@ const Navbar = () => {
 					<Button variant="link">Guides</Button>
 				</div>
 
-				<div>
-					<Button variant="link">Login</Button>
-					<Button>Get Started</Button>
+				<div className="flex gap-4 items-center">
+					<SignedOut>
+						<Link href="/auth/sign-in">
+							<Button variant="link">Login</Button>
+						</Link>
+						<Link href="/auth/sign-up">
+							<Button>Get Started</Button>
+						</Link>
+					</SignedOut>
+					<SignedIn>
+						{/* //todo: change this btw */}
+						<Link href="/app/dashboard">
+							<Button>Dashboard</Button>
+						</Link>
+					</SignedIn>
+					<UserButton afterSignOutUrl="/" />
 				</div>
 			</nav>
 		</div>

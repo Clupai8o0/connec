@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { ClerkProvider } from "@clerk/nextjs";
 import NextTopLoader from "nextjs-toploader";
-
-import Navbar from "@/components/navigation/Navbar";
-import Footer from "@/components/navigation/Footer";
-import Banner from "@/components/content/Banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,24 +18,23 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body className={inter.className}>
-				<NextTopLoader
-					color="#2563eb"
-					initialPosition={0.08}
-					crawlSpeed={200}
-					height={3}
-					crawl={true}
-					showSpinner={false}
-					easing="ease"
-					speed={200}
-				/>
+		<ClerkProvider>
+			<html lang="en">
+				<body className={inter.className}>
+					<NextTopLoader
+						color="#2563eb"
+						initialPosition={0.08}
+						crawlSpeed={200}
+						height={3}
+						crawl={true}
+						showSpinner={false}
+						easing="ease"
+						speed={200}
+					/>
 
-				<Banner />
-				<Navbar />
-				<div className="w-full flex justify-center">{children}</div>
-				<Footer />
-			</body>
-		</html>
+					<div className="w-full flex justify-center">{children}</div>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }
