@@ -15,9 +15,29 @@ import {
 	FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { ControlTypes } from "./PaginatedForm";
 import DatePicker from "./DatePicker";
 import { generateKey } from "@/lib/api";
+import { ControlTypes } from "@/types";
+import { Textarea } from "../ui/textarea";
+import { Checkbox } from "../ui/checkbox";
+
+const ControlInput = ({ element, field }: any) => {
+	if (element.control.type === ControlTypes.Input)
+		return <Input {...field} {...element.control.fields} />;
+	if (element.control.type === ControlTypes.Date)
+		return <DatePicker field={field} />;
+	if (element.control.type === ControlTypes.Textarea)
+		return <Textarea {...field} {...element.control.fields} />;
+	if (element.control.type === ControlTypes.Checkbox)
+		return (
+			<div className="flex gap-2 items-center">
+				<Checkbox {...field} {...element.control.fields} />
+				<div>
+					<p className="small">{element.control.fields.title}</p>
+				</div>
+			</div>
+		);
+};
 
 const FormPage = ({ title, schema, elements, onSubmit, next }: any) => {
 	// 1. Define your form.
@@ -46,13 +66,7 @@ const FormPage = ({ title, schema, elements, onSubmit, next }: any) => {
 								<FormItem className="flex flex-col">
 									<FormLabel>{element.label}</FormLabel>
 									<FormControl>
-										{element.control.type === ControlTypes.Input ? (
-											<Input {...field} {...element.control.fields} />
-										) : element.control.type === ControlTypes.Date ? (
-											<DatePicker field={field} /> //todo: wait how input?
-										) : (
-											""
-										)}
+										<ControlInput element={element} field={field} />
 									</FormControl>
 									<FormDescription>{element.desc}</FormDescription>
 									<FormMessage />

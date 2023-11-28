@@ -80,3 +80,19 @@ export enum CategoryType {
 	Services = "services",
 	Venues = "venues",
 }
+
+export enum ControlTypes {
+	Input = "input",
+	Date = "date",
+	Location = "location",
+	Textarea = "textarea",
+	File = "file",
+	Checkbox = "checkbox",
+}
+
+export enum DashboardContent {
+	Events = "events",
+	Services = "services",
+	Venues = "venues",
+	Profile = "profile",
+}
