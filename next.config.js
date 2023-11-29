@@ -37,6 +37,21 @@ const nextConfig = {
 				destination: "/app/dashboard",
 				permanent: true,
 			},
+			{
+				source: "/app-business",
+				destination: "/app/dashboard/business",
+				permanent: true,
+			},
+			{
+				source: "/app-artist",
+				destination: "/app/dashboard/artist",
+				permanent: true,
+			},
+			{
+				source: "/settings",
+				destination: "/app/settings",
+				permanent: true,
+			},
 		];
 	},
 };

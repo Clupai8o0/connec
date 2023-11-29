@@ -15,11 +15,10 @@ export default function ContentLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<div className="flex flex-col w-full">
+		<div className="flex flex-col w-full h-full">
 			<Banner />
 			<Navbar />
-			<div className="mt-16">{children}</div>
-			{/* <Footer /> */}
+			<div className="h-full">{children}</div>
 		</div>
 	);
 }

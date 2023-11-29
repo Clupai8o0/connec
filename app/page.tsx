@@ -21,7 +21,7 @@ export default function Home() {
 	return (
 		<div className="flex flex-col w-full">
 			<Banner />
-			<Navbar darkMode />
+			<Navbar darkMode absolute />
 			<main className="w-full h-full relative flex flex-col items-center">
 				<Hero />
 				<Sponsors />

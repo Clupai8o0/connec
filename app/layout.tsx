@@ -22,7 +22,7 @@ export default function RootLayout({
 			<html lang="en">
 				<body className={inter.className}>
 					<NextTopLoader
-						color="#2563eb"
+						color="#71717a"
 						initialPosition={0.08}
 						crawlSpeed={200}
 						height={3}
@@ -32,7 +32,7 @@ export default function RootLayout({
 						speed={200}
 					/>
 
-					<div className="w-full flex justify-center">{children}</div>
+					<div className="w-full h-full flex justify-center">{children}</div>
 				</body>
 			</html>
 		</ClerkProvider>

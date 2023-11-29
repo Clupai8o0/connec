@@ -1,10 +1,8 @@
 import Image from "next/image";
 import { faker } from "@faker-js/faker";
 import { Button } from "../ui/button";
-import Link from "next/link";
-import { Pencil } from "lucide-react";
 
-const Profile = () => {
+const ArtistProfile = () => {
 	return (
 		<div className="w-full">
 			<h1 className="hidden" aria-hidden>
@@ -22,30 +20,20 @@ const Profile = () => {
 
 			{/* profile */}
 			<div className="px-12">
-					<div className="relative h-[72px]">
-						<div className="absolute w-36 h-36 rounded-full border-4 border-white -top-[72px] shadow-md">
-							<img
-								src={faker.image.avatar()}
-								alt="A random avatar from faker"
-								className="rounded-full w-36 h-36"
-							/>
-						</div>
+				<div className="relative h-[72px]">
+					<div className="absolute w-36 h-36 rounded-full border-4 border-white -top-[72px] shadow-md">
+						<img
+							src={faker.image.avatar()}
+							alt="A random avatar from faker"
+							className="rounded-full w-36 h-36"
+						/>
 					</div>
+				</div>
 
-					<div className="mt-8 flex gap-4">
-						<div>
-							<p className="title font-semibold pb-2">
-							{faker.person.fullName()}
-						</p>
-						<span className="muted">{faker.person.jobTitle()}</span>
-						</div>
-
-						<Link href="/app/settings">
-						<Button variant="ghost" className="flex items-center gap-2 text-gray-600">
-							<Pencil /> Customize
-						</Button>
-					</Link>
-					</div>	
+				<div className="mt-8">
+					<p className="title font-semibold pb-2">{faker.person.fullName()}</p>
+					<span className="muted">{faker.person.jobTitle()}</span>
+				</div>
 			</div>
 
 			<div className="px-12 flex gap-4 mt-6">
@@ -97,9 +85,7 @@ const Profile = () => {
 							creating a business profile is...
 						</p>
 						<div className="flex gap-2 mt-2">
-							<Link href="/app/dashboard/business">
-								<Button>Create Now</Button>
-							</Link>
+							<Button>Create Now</Button>
 							<Button variant="outline">Learn More</Button>
 						</div>
 					</div>
@@ -115,9 +101,7 @@ const Profile = () => {
 							creative profile is...
 						</p>
 						<div className="flex gap-2 mt-2">
-							<Link href="/app/dashboard/artist">
-								<Button>Create Now</Button>
-							</Link>
+							<Button>Create Now</Button>
 							<Button variant="outline">Learn More</Button>
 						</div>
 					</div>
@@ -127,4 +111,4 @@ const Profile = () => {
 	);
 };
 
-export default Profile;
+export default ArtistProfile;

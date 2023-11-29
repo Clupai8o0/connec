@@ -1,5 +1,7 @@
 "use client";
 
+import ArtistProfile from "@/components/dashboard/ArtistProfile";
+import BusinessProfile from "@/components/dashboard/BusinessProfile";
 import Events from "@/components/dashboard/Events";
 import Profile from "@/components/dashboard/Profile";
 import Services from "@/components/dashboard/Services";
@@ -18,7 +20,7 @@ function Dashboard() {
 		<div className="flex w-full h-full">
 			<Sidebar content={content} setContent={setContent} />
 			<main className="w-full mb-12">
-				{content === DashboardContent.Profile && <Profile />}
+				{content === DashboardContent.Profile && <ArtistProfile />}
 				{content === DashboardContent.Venues && <Venues />}
 				{content === DashboardContent.Services && <Services />}
 				{content === DashboardContent.Events && <Events />}
