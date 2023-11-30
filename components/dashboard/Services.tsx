@@ -12,6 +12,7 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
+import ServiceCard from "./ServiceCard";
 
 const Services = () => {
 	return (
@@ -20,7 +21,7 @@ const Services = () => {
 				<Button>Create Venue</Button>
 			</Link> */}
 
-			<h1 className="title">Venues</h1>
+			<h1 className="title">Services</h1>
 
 			<div className="mt-4 flex gap-2">
 				<Select>
@@ -49,18 +50,23 @@ const Services = () => {
 				<div>
 					<div className="flex justify-between items-center">
 						<div>
-							<h2 className="heading pb-0">Created</h2>
+							<h2 className="heading pb-0">Your services</h2>
 							<p className="muted">
-								The venues you have created will appear here
+								The services you have created will appear here
 							</p>
 						</div>
-						<Link href="/app/create/venue">
-							<Button>Create Venue</Button>
-						</Link>
+						<div className="flex gap-2">
+							<Link href="/app/create/service">
+								<Button>Start Service</Button>
+							</Link>
+							<Link href="/jobs">
+								<Button variant="secondary">Job Board</Button>
+							</Link>
+						</div>
 					</div>
 
-					<div className="flex gap-4">
-						<VenueCard />
+					<div className="flex gap-4 overflow-x-auto">
+						<ServiceCard />
 					</div>
 				</div>
 
@@ -69,7 +75,7 @@ const Services = () => {
 						<div>
 							<h2 className="heading pb-0">Saved</h2>
 							<p className="muted">
-								The venues you have saved will appear here
+								The services you have saved will appear here
 							</p>
 						</div>
 						<Button
@@ -80,23 +86,23 @@ const Services = () => {
 						</Button>
 					</div>
 
-					<div className="flex gap-4">
-						<VenueCard />
-						<VenueCard />
-						<VenueCard />
-						<VenueCard />
+					<div className="flex gap-4 overflow-x-auto">
+						<ServiceCard />
+						<ServiceCard />
+						<ServiceCard />
+						<ServiceCard />
 					</div>
 				</div>
 
 				<div>
 					<h2 className="heading pb-0">Previously Visited</h2>
 					<p className="muted">
-						The venues you previously visited or used will appear here
+						The services you previously visited or used will appear here
 					</p>
 
-					<div className="flex gap-4">
-						<VenueCard />
-						<VenueCard />
+					<div className="flex gap-4 overflow-x-auto">
+						<ServiceCard />
+						<ServiceCard />
 					</div>
 				</div>
 			</div>

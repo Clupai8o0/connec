@@ -25,6 +25,7 @@ const Hero = () => {
 					and expertise bring your vision to life, creating cherished memories
 					with every occasion.
 				</p>
+				<div className="mt-4"></div>
 				<SearchBar />
 			</div>
 		</div>

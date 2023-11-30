@@ -15,7 +15,7 @@ const VenueCard = () => {
 					<div>
 						<dt className="sr-only">Price</dt>
 
-						<dd className="text-sm text-gray-500">$240,000</dd>
+						<dd className="text-sm text-gray-500">$400/hour</dd>
 					</div>
 
 					<div>

@@ -3,62 +3,61 @@
 import { DashboardContent } from "@/types";
 import { CalendarCheck2, Map, Speech } from "lucide-react";
 import React, { SetStateAction } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-interface Props {
-	content: DashboardContent;
-	setContent: React.Dispatch<SetStateAction<DashboardContent>>;
-}
+const Sidebar = () => {
+	const pathname = usePathname().split("/")[3];
 
-const Sidebar = ({ content, setContent }: Props) => {
 	return (
 		<div className="flex min-h-full flex-col justify-between border-e bg-white">
 			<div className="px-4 py-6">
 				<ul className="mt-6 space-y-1">
 					<li>
-						<button
-							onClick={() => setContent(DashboardContent.Venues)}
+						<Link
+							href="/app/dashboard/venues"
 							className={`flex items-center gap-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
-								content === DashboardContent.Venues
+								pathname === DashboardContent.Venues
 									? "text-blue-500 bg-gray-100"
 									: "hover:bg-gray-100 hover:text-gray-700"
 							}`}
 						>
 							<Map /> <span>Venues</span>
-						</button>
+						</Link>
 					</li>
 					<li>
-						<button
-							onClick={() => setContent(DashboardContent.Services)}
+						<Link
+							href="/app/dashboard/services"
 							className={`flex items-center gap-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
-								content === DashboardContent.Services
+								pathname === DashboardContent.Services
 									? "text-blue-500 bg-gray-100"
 									: "hover:bg-gray-100 hover:text-gray-700"
 							}`}
 						>
 							<Speech /> <span>Services</span>
-						</button>
+						</Link>
 					</li>
 
 					<li>
-						<button
-							onClick={() => setContent(DashboardContent.Events)}
+						<Link
+							href="/app/dashboard/events"
 							className={`flex items-center gap-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
-								content === DashboardContent.Events
+								pathname === DashboardContent.Events
 									? "text-blue-500 bg-gray-100"
 									: "hover:bg-gray-100 hover:text-gray-700"
 							}`}
 						>
 							<CalendarCheck2 /> <span>Events</span>
-						</button>
+						</Link>
 					</li>
 				</ul>
 			</div>
 
 			<div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
-				<button
-					onClick={() => setContent(DashboardContent.Profile)}
+				<Link
+					href="/app/dashboard/profile"
 					className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
-						content === DashboardContent.Profile
+						pathname === DashboardContent.Profile
 							? "text-blue-500 bg-gray-100"
 							: "hover:bg-gray-100 hover:text-gray-700"
 					}`}
@@ -77,7 +76,7 @@ const Sidebar = ({ content, setContent }: Props) => {
 							<span> eric@frusciante.com </span>
 						</p>
 					</div>
-				</button>
+				</Link>
 			</div>
 		</div>
 	);

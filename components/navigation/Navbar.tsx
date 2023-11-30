@@ -44,7 +44,11 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 			}`}
 		>
 			{/* <nav className="max-w-7xl w-full py-8 flex items-center justify-between absolute"> */}
-			<nav className={`max-w-7xl w-full py-4 flex items-center justify-between ${absolute && "absolute py-8"}`}>
+			<nav
+				className={`max-w-7xl w-full py-4 flex items-center justify-between ${
+					absolute && "absolute py-8"
+				}`}
+			>
 				{/* //todo: maybe move this logo somewhere more quieter */}
 				<div>
 					<Link href="/home">
@@ -102,6 +106,9 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 					<Button variant="link">Services</Button>
 					<Button variant="link">Venues</Button>
 					<Button variant="link">Guides</Button>
+					<Link href="/premium">
+						<Button variant="link">Premium</Button>
+					</Link>
 				</div>
 
 				<div className="flex gap-4 items-center">
@@ -115,7 +122,7 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 					</SignedOut>
 					<SignedIn>
 						{/* //todo: change this btw */}
-						<Link href="/app/dashboard">
+						<Link href="/app/dashboard/profile">
 							<Button>Dashboard</Button>
 						</Link>
 					</SignedIn>

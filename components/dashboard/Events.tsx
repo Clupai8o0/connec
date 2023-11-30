@@ -12,6 +12,7 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
+import EventCard from "./EventCard";
 
 const Events = () => {
 	return (
@@ -20,7 +21,7 @@ const Events = () => {
 				<Button>Create Venue</Button>
 			</Link> */}
 
-			<h1 className="title">Venues</h1>
+			<h1 className="title">Events</h1>
 
 			<div className="mt-4 flex gap-2">
 				<Select>
@@ -43,63 +44,39 @@ const Events = () => {
 						<SelectItem value="rating">Rating</SelectItem>
 					</SelectContent>
 				</Select>
+				<Link href="/app/create/event">
+					<Button>Start an Event</Button>
+				</Link>
 			</div>
 
-			<div className="flex flex-col gap-8 mt-6">
-				<div>
-					<div className="flex justify-between items-center">
-						<div>
-							<h2 className="heading pb-0">Created</h2>
-							<p className="muted">
-								The venues you have created will appear here
-							</p>
-						</div>
-						<Link href="/app/create/venue">
-							<Button>Create Venue</Button>
-						</Link>
-					</div>
+			<ol className="relative border-s border-gray-200 dark:border-gray-700 mt-6">
+				<li className="mb-10 ms-4">
+					<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+					<time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+						Today, 30th November, 2023
+					</time>
 
-					<div className="flex gap-4">
-						<VenueCard />
-					</div>
-				</div>
+					<EventCard />
+				</li>
 
-				<div>
-					<div className="flex justify-between">
-						<div>
-							<h2 className="heading pb-0">Saved</h2>
-							<p className="muted">
-								The venues you have saved will appear here
-							</p>
-						</div>
-						<Button
-							variant="ghost"
-							className="flex gap-2 text-gray-600 hover:text-gray-900"
-						>
-							View More <ArrowRight />{" "}
-						</Button>
+				<li className="mb-10 ms-4">
+					<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+					<time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+						March 2022
+					</time>
+					<div className="flex flex-col gap-2">
+						<EventCard />
+						<EventCard />
 					</div>
-
-					<div className="flex gap-4">
-						<VenueCard />
-						<VenueCard />
-						<VenueCard />
-						<VenueCard />
-					</div>
-				</div>
-
-				<div>
-					<h2 className="heading pb-0">Previously Visited</h2>
-					<p className="muted">
-						The venues you previously visited or used will appear here
-					</p>
-
-					<div className="flex gap-4">
-						<VenueCard />
-						<VenueCard />
-					</div>
-				</div>
-			</div>
+				</li>
+				<li className="ms-4">
+					<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+					<time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+						April 2022
+					</time>
+					<EventCard />
+				</li>
+			</ol>
 		</div>
 	);
 };

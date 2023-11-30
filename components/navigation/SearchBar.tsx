@@ -18,13 +18,14 @@ const SearchBar = () => {
 	const [focused, setFocused] = useState(false);
 
 	return (
-		<div className="max-w-2xl dark">
-      {/* //todo: design it properly dumbass */}
-			<Command>
+		<div className="">
+			{/* //todo: design it properly dumbass */}
+			<Command className="w-96">
 				<CommandInput
 					placeholder="Type a command or search..."
 					onFocus={() => setFocused(true)}
 					onBlur={() => setFocused(false)}
+					className="w-96"
 				/>
 				{focused && (
 					<CommandList>

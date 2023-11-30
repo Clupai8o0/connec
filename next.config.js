@@ -34,7 +34,7 @@ const nextConfig = {
 			},
 			{
 				source: "/app",
-				destination: "/app/dashboard",
+				destination: "/app/dashboard/profile",
 				permanent: true,
 			},
 			{
