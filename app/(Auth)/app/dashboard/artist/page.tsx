@@ -18,7 +18,7 @@ function Dashboard() {
 
 	return (
 		<div className="flex w-full h-full">
-			<Sidebar content={content} setContent={setContent} />
+			<Sidebar />
 			<main className="w-full mb-12">
 				{content === DashboardContent.Profile && <ArtistProfile />}
 				{content === DashboardContent.Venues && <Venues />}

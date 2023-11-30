@@ -30,7 +30,7 @@ export default function DashboardPage() {
 
 	return (
 		<div className="flex w-full h-full">
-			<Sidebar content={content} setContent={setContent} />
+			<Sidebar />
 			<div className="w-full">
 				<div className="md:hidden">
 					<Image
