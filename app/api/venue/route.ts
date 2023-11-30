@@ -24,48 +24,44 @@ export async function GET(req: NextRequest) {
 				name: "Jennifer Sterling",
 				title: "President and CEO",
 			}, //? in the future this will only have an id
-			title: "EliteVenue Stadium",
-			desc: `# A Heading
+			title: "The Ritz-Carlton Bahrain",
+			desc: `Nestled along the captivating shores of Manama, The Ritz-Carlton Bahrain stands as a pinnacle of sophistication and luxury, offering an unparalleled setting for an array of events. With its prime location in the vibrant Seef District, this venue beckons guests with its breathtaking views of the Arabian Gulf, setting the stage for unforgettable moments.
 
-Welcome to EliteVenue Stadium, your premier destination for hosting remarkable sporting events, concerts,  corporate gatherings, and more. Nestled in a picturesque setting, EliteVenue Stadium stands as a testament to excellence, offering you a versatile and vibrant space that caters to your every event need.
+# Elegant Event Spaces
+The Ritz-Carlton Bahrain showcases a diverse selection of elegant event spaces designed to cater to various occasions. From the grand ballrooms adorned with exquisite chandeliers to the enchanting outdoor terraces overlooking the azure waters, each space is meticulously crafted to provide a blend of opulence and functionality. The versatility of these spaces enables seamless customization, ensuring that every event, whether an intimate gathering or a lavish celebration, is perfectly tailored to meet the client's desires.
 
-At EliteVenue Stadium, we pride ourselves on transforming your dreams into extraordinary realities. Whether it's a high-octane football match, an electrifying music concert, a corporate team-building extravaganza, or any event your heart desires, our world-class facility is the canvas upon which your vision will come to life.
+# Exceptional Services
+At the heart of The Ritz-Carlton Bahrain's allure lies its commitment to providing unparalleled service. A dedicated team of event specialists, including seasoned planners and coordinators, collaborates closely with clients to bring their vision to life. From the initial planning stages to the final execution, every detail is meticulously curated, ensuring a flawless and memorable experience for hosts and guests alike.
 
-![A fuking desert](https://images.unsplash.com/photo-1682686578842-00ba49b0a71a?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+# Gastronomic Excellence
+The culinary offerings at this venue are nothing short of extraordinary. The Ritz-Carlton Bahrain's culinary artisans craft delectable menus that tantalize the taste buds, offering an array of gastronomic delights tailored to each event. Whether it's a sumptuous buffet, an exquisite plated dinner, or bespoke themed cuisine, the culinary team delivers unparalleled excellence, complementing the ambiance and adding an extra layer of sophistication to every gathering.
 
-Our state-of-the-art amenities and impeccable services ensure that your event unfolds seamlessly. From spacious seating arrangements and cutting-edge audio-visual technology to well-maintained turf and a variety of culinary options, we've thought of everything to create a memorable experience for you and your guests.
-
-## A Subheading
-
-What truly sets EliteVenue Stadium apart is our commitment to exceeding expectations. Our dedicated team is here to assist you every step of the way, from event planning and logistics to execution, ensuring that every moment is as extraordinary as the next. The possibilities are endless at EliteVenue Stadium, where dreams take the center stage and turn into cherished realities.
-
-Come, experience the magic of EliteVenue Stadium, where your event finds its perfect home, and memories are etched forever. Whether you're a sports enthusiast, a music lover, or a corporate professional, EliteVenue Stadium is ready to make your event exceptional.
-
-Unleash the possibilities, book EliteVenue Stadium, and let your dreams take flight. Your vision, our playground – EliteVenue Stadium, the stage of your dreams.`,
+# Impeccable Atmosphere
+Beyond its luxurious facilities and exceptional services, The Ritz-Carlton Bahrain creates an atmosphere of refined elegance and tranquility. The harmonious blend of modern amenities and timeless sophistication, coupled with the warm hospitality of the staff, elevates every event hosted within its walls, leaving a lasting impression on guests.`,
 			imgs: [
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1682687220211-c471118c9e92?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "A fuking desert",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1682686581218-82326951f4ad?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1510076857177-7470076d4098?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "A mermaid",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1682686578842-00ba49b0a71a?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1613067532651-7075a620c900?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "Another fuking desert",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1682687218982-6c508299e107?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "Cool landscape",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1699175481336-52d618f1f41d?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "A fuking plant",
 				},
 			],
@@ -77,27 +73,35 @@ Unleash the possibilities, book EliteVenue Stadium, and let your dreams take fli
 				title: "SpectraFields Event Rental Package",
 				price: {
 					per: "hr",
-					value: "$1,500",
+					value: "$500",
 				},
-				desc: `- *Exclusive Venue Access:* Secure exclusive access to SpectraFields, ensuring your event is the center of attention.
-
-- *Flexible Hourly Booking:* Plan your event with ease, thanks to our flexible hourly booking options.
-
-- *Meticulously Maintained Venue:* Enjoy our well-manicured turf and top-notch facilities that set the stage for an exceptional event.
-
-- *Professional Event Staff:* Our experienced event professionals will assist you from planning to execution, ensuring your event runs smoothly.`,
+				desc: `- *Dedicated Event Coordinator:* A professional coordinator to assist in planning and executing events.
+- *Audiovisual Equipment Rental:* Cutting-edge equipment available for presentations and entertainment.
+- *Catering Services:* Customizable menus offering gourmet cuisine for various occasions.
+- *Customizable Event Spaces:* Versatile indoor and outdoor areas suitable for weddings, corporate functions, and private gatherings.`,
 			}, //? for now let's only allow for one package
 			reviews: [
 				{
 					user: {
 						//? this will be an id in the future once the user database is set
 						id: generateKey(),
-						name: "Sarah Mitchell",
+						name: "Sarah W.",
 						title: "Event Planner",
 					},
-					stars: 3.5,
-					subject: "An Unforgettable Event Experience at SpectraFields",
-					body: "I recently had the pleasure of hosting an event at SpectraFields, and it was an absolute dream come true! The venue's flexibility in terms of seating arrangements and the impeccable maintenance of the turf truly made a significant difference in creating a memorable atmosphere. Jennifer and her team went above and beyond to ensure our event was a success. The state-of-the-art audio-visual equipment added a special touch, and their professional event staff was there at every turn, making sure everything ran smoothly. Our client was delighted, and so were we. SpectraFields truly lives up to its name as a place where dreams take center stage. We can't wait to plan our next event here!",
+					stars: 5,
+					subject: "Unforgettable Wedding Venue",
+					body: "Exquisite venue with impeccable service. Our wedding reception here was nothing short of magical. The staff went above and beyond to ensure every detail was perfect.",
+				},
+				{
+					user: {
+						//? this will be an id in the future once the user database is set
+						id: generateKey(),
+						name: "Sarah W.",
+						title: "Event Planner",
+					},
+					stars: 4.5,
+					subject: "Ideal Venue for Corporate Events",
+					body: "Had a corporate conference at The Ritz-Carlton Bahrain, and it was a fantastic experience. The event spaces were well-equipped, and the catering was exceptional. Highly recommended for business events",
 				},
 				{
 					user: {
@@ -106,9 +110,9 @@ Unleash the possibilities, book EliteVenue Stadium, and let your dreams take fli
 						name: "Sarah Mitchell",
 						title: "Event Planner",
 					},
-					stars: 5,
-					subject: "An Unforgettable Event Experience at SpectraFields",
-					body: "I recently had the pleasure of hosting an event at SpectraFields, and it was an absolute dream come true! The venue's flexibility in terms of seating arrangements and the impeccable maintenance of the turf truly made a significant difference in creating a memorable atmosphere. Jennifer and her team went above and beyond to ensure our event was a success. The state-of-the-art audio-visual equipment added a special touch, and their professional event staff was there at every turn, making sure everything ran smoothly. Our client was delighted, and so were we. SpectraFields truly lives up to its name as a place where dreams take center stage. We can't wait to plan our next event here!",
+					stars: 4,
+					subject: "Luxurious Ambiance for Social Gatherings",
+					body: "The ambiance and attention to detail make this venue stand out. Whether it's a gala dinner or a social gathering, The Ritz-Carlton Bahrain offers a truly luxurious setting",
 				},
 			],
 		};

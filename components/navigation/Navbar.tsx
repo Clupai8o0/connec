@@ -102,13 +102,21 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 				</div>
 
 				<div>
-					<Button variant="link">Event</Button>
-					<Button variant="link">Services</Button>
-					<Button variant="link">Venues</Button>
-					<Button variant="link">Guides</Button>
-					<Link href="/premium">
-						<Button variant="link">Premium</Button>
+					<Link href="/event/123">
+						<Button variant="link">Event</Button>
 					</Link>
+					<Link href="/service/123">
+						<Button variant="link">Services</Button>
+					</Link>
+					<Link href="/venue/123">
+						<Button variant="link">Venues</Button>
+					</Link>
+					<Link href="/event/123">
+						<Button variant="link">Guides</Button>
+					</Link>
+					{/* <Link href="/premium">
+						<Button variant="link">Premium</Button>
+					</Link> */}
 				</div>
 
 				<div className="flex gap-4 items-center">

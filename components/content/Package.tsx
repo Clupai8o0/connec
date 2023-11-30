@@ -6,8 +6,8 @@ import { Button } from "../ui/button";
 const Package = ({ desc, price, title }: Package) => {
 	return (
 		<div className="rounded-xl bg-gray-100 sticky top-6 p-6">
-			<h1 className="subsubheading">{title}</h1>
-			<h2 className="mt-4 title">
+			{/* <h1 className="subsubheading">{title}</h1> */}
+			<h2 className="title">
 				{price.value}/{price.per}
 			</h2>
 			<Markdown content={desc} />

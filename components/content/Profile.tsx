@@ -1,12 +1,10 @@
 import { faker } from "@faker-js/faker";
 
 interface Props {
-	name: string;
-	title: string; //! this is all temporary
 	className?: string;
 }
 
-const Profile = ({ name, title, className }: Props) => {
+const Profile = ({ className }: Props) => {
 	return (
 		<div className={`flex gap-4 ${className}`}>
 			<img
@@ -17,8 +15,8 @@ const Profile = ({ name, title, className }: Props) => {
         className="rounded-full"
 			/>
       <div className="flex flex-col justify-center">
-        <p className="large leading-tight">{name}</p>
-        <span className="muted">{title}</span>
+        <p className="large leading-tight">{faker.person.fullName()}</p>
+        <span className="muted">{faker.person.jobTitle()}</span>
       </div>
 		</div>
 	);

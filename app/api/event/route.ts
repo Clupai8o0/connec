@@ -24,24 +24,21 @@ export async function GET(req: NextRequest) {
 				name: "Jennifer Sterling",
 				title: "President and CEO",
 			}, //? in the future this will only have an id
-			title: "EliteVenue Stadium",
-			desc: `# A Heading
+			title: "Bahrain International Jazz Festival",
+			desc: `# Celebrating Jazz Rhythms Amidst Bahrain's Splendor
+The Bahrain International Jazz Festival returns to Bahrain Bay Park, promising an unforgettable evening dedicated to the timeless and soulful melodies of jazz. This vibrant event unites passionate jazz enthusiasts and music aficionados for a night of enchanting performances and musical discovery.
 
-Welcome to EliteVenue Stadium, your premier destination for hosting remarkable sporting events, concerts,  corporate gatherings, and more. Nestled in a picturesque setting, EliteVenue Stadium stands as a testament to excellence, offering you a versatile and vibrant space that caters to your every event need.
+# Captivating Performances by World-Class Artists
+Experience the magic of live jazz with captivating performances by an eclectic lineup of acclaimed international jazz musicians. From smooth melodies to upbeat rhythms, witness the versatility and innovation of this beloved genre showcased by both seasoned jazz legends and emerging talents.
 
-At EliteVenue Stadium, we pride ourselves on transforming your dreams into extraordinary realities. Whether it's a high-octane football match, an electrifying music concert, a corporate team-building extravaganza, or any event your heart desires, our world-class facility is the canvas upon which your vision will come to life.
+# Local Talent Spotlight
+In addition to international acts, the festival proudly highlights Bahrain's vibrant jazz scene, providing a platform for local jazz musicians to showcase their talent. Experience the rich tapestry of jazz interpretations, reflecting the region's unique musical influences and cultural diversity.
 
-![A fuking desert](https://images.unsplash.com/photo-1682686578842-00ba49b0a71a?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+# Immersive Outdoor Setting
+The enchanting Bahrain Bay Park serves as the perfect backdrop for this musical extravaganza. Amidst the serene waterfront and lush greenery, attendees can revel in the ambiance, socialize, and delight in the communal celebration of jazz music under the starlit sky.
 
-Our state-of-the-art amenities and impeccable services ensure that your event unfolds seamlessly. From spacious seating arrangements and cutting-edge audio-visual technology to well-maintained turf and a variety of culinary options, we've thought of everything to create a memorable experience for you and your guests.
-
-## A Subheading
-
-What truly sets EliteVenue Stadium apart is our commitment to exceeding expectations. Our dedicated team is here to assist you every step of the way, from event planning and logistics to execution, ensuring that every moment is as extraordinary as the next. The possibilities are endless at EliteVenue Stadium, where dreams take the center stage and turn into cherished realities.
-
-Come, experience the magic of EliteVenue Stadium, where your event finds its perfect home, and memories are etched forever. Whether you're a sports enthusiast, a music lover, or a corporate professional, EliteVenue Stadium is ready to make your event exceptional.
-
-Unleash the possibilities, book EliteVenue Stadium, and let your dreams take flight. Your vision, our playground – EliteVenue Stadium, the stage of your dreams.`,
+# Culinary Delights and Artisanal Crafts
+Explore a variety of culinary offerings from local vendors offering delectable cuisines and beverages. Indulge in gourmet delights while browsing through artisanal crafts and merchandise available at the festival, adding to the holistic experience of the event.`,
 			imgs: [
 				{
 					id: generateKey(),
@@ -76,41 +73,14 @@ Unleash the possibilities, book EliteVenue Stadium, and let your dreams take fli
 			package: {
 				title: "SpectraFields Event Rental Package",
 				price: {
-					per: "hr",
-					value: "$1,500",
+					general: "$25",
+					vip: "$60",
 				},
-				desc: `- *Exclusive Venue Access:* Secure exclusive access to SpectraFields, ensuring your event is the center of attention.
-
-- *Flexible Hourly Booking:* Plan your event with ease, thanks to our flexible hourly booking options.
-
-- *Meticulously Maintained Venue:* Enjoy our well-manicured turf and top-notch facilities that set the stage for an exceptional event.
-
-- *Professional Event Staff:* Our experienced event professionals will assist you from planning to execution, ensuring your event runs smoothly.`,
+				desc: "The Bahrain International Jazz Festival invites all music enthusiasts to join in and immerse themselves in an evening filled with the soulful harmonies and captivating rhythms of jazz, promising an unforgettable experience in the heart of Bahrain's cultural tapestry.",
+				duration: "6 hours",
+				date: "15 April, 2023",
+				time: "5:00 P.M. to 11:00 P.M."
 			}, //? for now let's only allow for one package
-			reviews: [
-				{
-					user: {
-						//? this will be an id in the future once the user database is set
-						id: generateKey(),
-						name: "Sarah Mitchell",
-						title: "Event Planner",
-					},
-					stars: 3.5,
-					subject: "An Unforgettable Event Experience at SpectraFields",
-					body: "I recently had the pleasure of hosting an event at SpectraFields, and it was an absolute dream come true! The venue's flexibility in terms of seating arrangements and the impeccable maintenance of the turf truly made a significant difference in creating a memorable atmosphere. Jennifer and her team went above and beyond to ensure our event was a success. The state-of-the-art audio-visual equipment added a special touch, and their professional event staff was there at every turn, making sure everything ran smoothly. Our client was delighted, and so were we. SpectraFields truly lives up to its name as a place where dreams take center stage. We can't wait to plan our next event here!",
-				},
-				{
-					user: {
-						//? this will be an id in the future once the user database is set
-						id: generateKey(),
-						name: "Sarah Mitchell",
-						title: "Event Planner",
-					},
-					stars: 5,
-					subject: "An Unforgettable Event Experience at SpectraFields",
-					body: "I recently had the pleasure of hosting an event at SpectraFields, and it was an absolute dream come true! The venue's flexibility in terms of seating arrangements and the impeccable maintenance of the turf truly made a significant difference in creating a memorable atmosphere. Jennifer and her team went above and beyond to ensure our event was a success. The state-of-the-art audio-visual equipment added a special touch, and their professional event staff was there at every turn, making sure everything ran smoothly. Our client was delighted, and so were we. SpectraFields truly lives up to its name as a place where dreams take center stage. We can't wait to plan our next event here!",
-				},
-			],
 		};
 
 		return handleSuccess("Works ig", data);

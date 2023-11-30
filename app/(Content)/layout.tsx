@@ -18,7 +18,7 @@ export default function ContentLayout({
 		<div className="flex flex-col w-full">
 			<Banner />
 			<Navbar />
-			<div className="mt-16">{children}</div>
+			<div className="mt-8">{children}</div>
 			<Footer />
 		</div>
 	);
