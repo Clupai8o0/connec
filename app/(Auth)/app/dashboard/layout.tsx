@@ -21,7 +21,7 @@ export default function ContentLayout({
 			<Navbar />
 			<div className="flex h-full">
 				<Sidebar />
-				<main className="mb-12 max-w-[100vw] overflow-hidden">{children}</main>
+				<main className="mb-12 max-w-[100vw] overflow-hidden w-full">{children}</main>
 			</div>
 		</div>
 	);
