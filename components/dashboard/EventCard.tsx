@@ -18,9 +18,9 @@ const EventCard = () => {
 					Sounds of Bahrain: A Night with Hala Al Turk
 				</h2>
 				<p className="mb-3 font-normal text-gray-700 dark:text-gray-400 truncate max-w-full">
-					Experience the enchanting melodies and vibrant rhythms of Bahrain's
-					musical sensation, Hala Al Turk, in an exclusive concert celebrating
-					the rich cultural heritage of Bahraini music.
+					Experience the enchanting melodies and vibrant rhythms of
+					Bahrain&apos;s musical sensation, Hala Al Turk, in an exclusive
+					concert celebrating the rich cultural heritage of Bahraini music.
 				</p>
 				<p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
 					Ticket Price: $40

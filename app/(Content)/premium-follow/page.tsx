@@ -22,15 +22,15 @@ function PremiumFollowPage() {
 								Charlie Puth is a multi-talented American singer, songwriter,
 								and producer known for his soulful pop music. Rising to fame
 								with his viral success on YouTube, Puth gained widespread
-								recognition with his hit singles like "Attention," "We Don't
-								Talk Anymore," and "One Call Away." His music often blends
-								catchy melodies with emotional depth, showcasing his impressive
-								vocal range and musical versatility. Beyond his singing prowess,
-								Puth is also recognized for his skills as a producer, often
-								involved in crafting and producing his own tracks. With a
-								distinctive voice and knack for creating radio-friendly hits,
-								Charlie Puth continues to captivate audiences with his musical
-								artistry and heartfelt compositions.
+								recognition with his hit singles like &quot;Attention,&quot; &quot;We
+								Don&apos;t Talk Anymore,&quot; and &quot;One Call Away.&quot; His music often
+								blends catchy melodies with emotional depth, showcasing his
+								impressive vocal range and musical versatility. Beyond his
+								singing prowess, Puth is also recognized for his skills as a
+								producer, often involved in crafting and producing his own
+								tracks. With a distinctive voice and knack for creating
+								radio-friendly hits, Charlie Puth continues to captivate
+								audiences with his musical artistry and heartfelt compositions.
 							</p>
 						</div>
 					</div>
@@ -52,15 +52,15 @@ function PremiumFollowPage() {
 								Charlie Puth is a multi-talented American singer, songwriter,
 								and producer known for his soulful pop music. Rising to fame
 								with his viral success on YouTube, Puth gained widespread
-								recognition with his hit singles like "Attention," "We Don't
-								Talk Anymore," and "One Call Away." His music often blends
-								catchy melodies with emotional depth, showcasing his impressive
-								vocal range and musical versatility. Beyond his singing prowess,
-								Puth is also recognized for his skills as a producer, often
-								involved in crafting and producing his own tracks. With a
-								distinctive voice and knack for creating radio-friendly hits,
-								Charlie Puth continues to captivate audiences with his musical
-								artistry and heartfelt compositions.
+								recognition with his hit singles like &quot;Attention,&quot; &quot;We
+								Don&apos;t Talk Anymore,&quot; and &quot;One Call Away.&quot; His music often
+								blends catchy melodies with emotional depth, showcasing his
+								impressive vocal range and musical versatility. Beyond his
+								singing prowess, Puth is also recognized for his skills as a
+								producer, often involved in crafting and producing his own
+								tracks. With a distinctive voice and knack for creating
+								radio-friendly hits, Charlie Puth continues to captivate
+								audiences with his musical artistry and heartfelt compositions.
 							</p>
 						</div>
 					</div>
@@ -82,15 +82,15 @@ function PremiumFollowPage() {
 								Charlie Puth is a multi-talented American singer, songwriter,
 								and producer known for his soulful pop music. Rising to fame
 								with his viral success on YouTube, Puth gained widespread
-								recognition with his hit singles like "Attention," "We Don't
-								Talk Anymore," and "One Call Away." His music often blends
-								catchy melodies with emotional depth, showcasing his impressive
-								vocal range and musical versatility. Beyond his singing prowess,
-								Puth is also recognized for his skills as a producer, often
-								involved in crafting and producing his own tracks. With a
-								distinctive voice and knack for creating radio-friendly hits,
-								Charlie Puth continues to captivate audiences with his musical
-								artistry and heartfelt compositions.
+								recognition with his hit singles like &quot;Attention,&quot; &quot;We
+								Don&apos;t Talk Anymore,&quot; and &quot;One Call Away.&quot; His music often
+								blends catchy melodies with emotional depth, showcasing his
+								impressive vocal range and musical versatility. Beyond his
+								singing prowess, Puth is also recognized for his skills as a
+								producer, often involved in crafting and producing his own
+								tracks. With a distinctive voice and knack for creating
+								radio-friendly hits, Charlie Puth continues to captivate
+								audiences with his musical artistry and heartfelt compositions.
 							</p>
 						</div>
 					</div>
@@ -112,15 +112,15 @@ function PremiumFollowPage() {
 								Charlie Puth is a multi-talented American singer, songwriter,
 								and producer known for his soulful pop music. Rising to fame
 								with his viral success on YouTube, Puth gained widespread
-								recognition with his hit singles like "Attention," "We Don't
-								Talk Anymore," and "One Call Away." His music often blends
-								catchy melodies with emotional depth, showcasing his impressive
-								vocal range and musical versatility. Beyond his singing prowess,
-								Puth is also recognized for his skills as a producer, often
-								involved in crafting and producing his own tracks. With a
-								distinctive voice and knack for creating radio-friendly hits,
-								Charlie Puth continues to captivate audiences with his musical
-								artistry and heartfelt compositions.
+								recognition with his hit singles like &quot;Attention,&quot; &quot;We
+								Don&apos;t Talk Anymore,&quot; and &quot;One Call Away.&quot; His music often
+								blends catchy melodies with emotional depth, showcasing his
+								impressive vocal range and musical versatility. Beyond his
+								singing prowess, Puth is also recognized for his skills as a
+								producer, often involved in crafting and producing his own
+								tracks. With a distinctive voice and knack for creating
+								radio-friendly hits, Charlie Puth continues to captivate
+								audiences with his musical artistry and heartfelt compositions.
 							</p>
 						</div>
 					</div>

@@ -20,8 +20,8 @@ const JobCard3 = () => {
 				</a>
 
 				<p className="mb-2 line-clamp-3 text-sm/relaxed text-gray-500 truncate">
-					As a Line Cook, you'll be responsible for preparing and cooking food
-					items as per the established recipes and guidelines. Your role
+					As a Line Cook, you&apos;ll be responsible for preparing and cooking
+					food items as per the established recipes and guidelines. Your role
 					involves working on a specific station in the kitchen, ensuring that
 					dishes are prepared accurately, efficiently, and to high-quality
 					standards. Collaboration with the kitchen team and the ability to work

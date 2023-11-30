@@ -50,7 +50,7 @@ const BusinessProfile = () => {
 							boundless curiosity. With her vibrant mane of auburn curls that
 							cascade down her shoulders, she often pairs her eclectic fashion
 							sense with oversized spectacles that add a touch of whimsy to her
-							look. Evelyn's passion for storytelling is palpable in every
+							look. Evelyn&apos;s passion for storytelling is palpable in every
 							conversation she engages in, her expressive gestures painting
 							vivid pictures as she speaks. An avid traveler and a voracious
 							reader, she carries the world in her heart and the library in her
@@ -65,7 +65,7 @@ const BusinessProfile = () => {
 							her empathy into action, often volunteering her time to support
 							community initiatives and championing inclusivity and equality.
 							Behind her gentle demeanor lies a resilient spirit, forged through
-							life's trials, which fuels her determination to make a positive
+							life&apos;s trials, which fuels her determination to make a positive
 							impact in the world, one step at a time.
 						</p>
 					</div>
