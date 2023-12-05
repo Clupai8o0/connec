@@ -39,8 +39,8 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 
 	return (
 		<div
-			className={`w-full flex justify-center relative z-50 ${
-				darkMode && "dark"
+			className={`w-full flex justify-center relative z-50 border-b border-gray-200 ${
+				darkMode && "dark border-0"
 			}`}
 		>
 			{/* <nav className="max-w-7xl w-full py-8 flex items-center justify-between absolute"> */}

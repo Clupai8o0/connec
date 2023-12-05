@@ -49,6 +49,12 @@ export function CommandBox() {
 							<span>Dashboard</span>
 						</CommandItem>
 					</Link>
+					<Link href="/get-started">
+						<CommandItem>
+							<ExternalLink className="mr-2 h-4 w-4" />
+							<span>Get Started</span>
+						</CommandItem>
+					</Link>
 				</CommandGroup>
 				<CommandSeparator />
 			</CommandList>

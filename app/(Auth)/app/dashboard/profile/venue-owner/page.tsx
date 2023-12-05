@@ -1,6 +1,6 @@
 import Profile from "@/components/dashboard/Profile";
+import Sidebar from "@/components/dashboard/Sidebar";
 import { faker } from "@faker-js/faker";
-import { Sidebar } from "lucide-react";
 
 //todo: btw this has to be done better
 function ProfilePage() {

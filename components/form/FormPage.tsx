@@ -15,23 +15,23 @@ import {
 	FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import DatePicker from "./DatePicker";
 import { generateKey } from "@/lib/api";
 import { ControlTypes } from "@/types";
 import { Textarea } from "../ui/textarea";
 import { Checkbox } from "../ui/checkbox";
+import DatePicker from "./DatePicker";
 
-const ControlInput = ({ element, field }: any) => {
+const ControlInput = ({ element }: any) => {
 	if (element.control.type === ControlTypes.Input)
-		return <Input {...field} {...element.control.fields} />;
-	if (element.control.type === ControlTypes.Date)
-		return <DatePicker field={field} />;
+		return <Input {...element.control.fields} />;
+	// return <Input {...field} {...element.control.fields} />;
+	// if (element.control.type === ControlTypes.Date) return <DatePicker />;
 	if (element.control.type === ControlTypes.Textarea)
-		return <Textarea {...field} {...element.control.fields} />;
+		return <Textarea {...element.control.fields} />;
 	if (element.control.type === ControlTypes.Checkbox)
 		return (
 			<div className="flex gap-2 items-center">
-				<Checkbox {...field} {...element.control.fields} />
+				<Checkbox {...element.control.fields} />
 				<div>
 					<p className="small">{element.control.fields.title}</p>
 				</div>
@@ -39,23 +39,30 @@ const ControlInput = ({ element, field }: any) => {
 		);
 };
 
-const FormPage = ({ title, schema, elements, onSubmit, next }: any) => {
-	// 1. Define your form.
-	const form = useForm<z.infer<typeof schema>>({
-		resolver: zodResolver(schema),
-	});
-
-	// 2. Define a submit handler.
-	function handleSubmit(values: z.infer<typeof schema>) {
-		onSubmit(values);
+const FormPage = ({ title, schema, elements, onSubmit, next, desc }: any) => {
+	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+		e.preventDefault();
+		onSubmit(e);
 		next();
 	}
 
 	return (
 		<div>
-			<h1 className="title mb-12">{title}</h1>
+			<h1 className="title mb-2">{title}</h1>
+			<p className="text-lg opacity-80 mb-12">{desc}</p>
 
-			<Form {...form}>
+			<form onSubmit={handleSubmit} className="space-y-8">
+				{elements.map((element: any) => (
+					<div className="flex flex-col gap-2 w-full">
+						<label className="small">{element.label}</label>
+						{element.control}
+						<span className="muted">{element.desc}</span>
+					</div>
+				))}
+				<Button type="submit">Next</Button>
+			</form>
+
+			{/* <Form {...form}>
 				<form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
 					{elements.map((element: any) => (
 						<FormField
@@ -76,7 +83,7 @@ const FormPage = ({ title, schema, elements, onSubmit, next }: any) => {
 					))}
 					<Button type="submit">Next</Button>
 				</form>
-			</Form>
+			</Form> */}
 		</div>
 	);
 };

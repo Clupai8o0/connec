@@ -19,10 +19,10 @@ export default function ContentLayout({
 		<div className="flex flex-col w-full h-full">
 			<Banner />
 			<Navbar />
-			<div className="flex h-full">
-				<Sidebar />
-				<main className="mb-12 max-w-[100vw] overflow-hidden w-full">{children}</main>
-			</div>
+
+			<main className="mb-12 max-w-[100vw] overflow-hidden w-full h-full flex">
+				{children}
+			</main>
 		</div>
 	);
 }

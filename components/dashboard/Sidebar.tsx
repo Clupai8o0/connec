@@ -6,7 +6,24 @@ import React, { SetStateAction } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-const Sidebar = () => {
+interface Props {
+	profile?: {
+		url: string;
+		src: string;
+		name: string;
+		email: string;
+	};
+	venues?: string;
+	services?: string;
+	events?: string;
+}
+
+const Sidebar = ({
+	profile,
+	venues,
+	services,
+	events,
+}: Props) => {
 	const pathname = usePathname().split("/")[3];
 
 	return (
@@ -15,7 +32,7 @@ const Sidebar = () => {
 				<ul className="mt-6 space-y-1">
 					<li>
 						<Link
-							href="/app/dashboard/venues"
+							href={(venues && venues) || "/app/dashboard/venues"}
 							className={`flex items-center gap-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
 								pathname === DashboardContent.Venues
 									? "text-blue-500 bg-gray-100"
@@ -27,7 +44,7 @@ const Sidebar = () => {
 					</li>
 					<li>
 						<Link
-							href="/app/dashboard/services"
+							href={(services && services) || "/app/dashboard/services"}
 							className={`flex items-center gap-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
 								pathname === DashboardContent.Services
 									? "text-blue-500 bg-gray-100"
@@ -40,7 +57,7 @@ const Sidebar = () => {
 
 					<li>
 						<Link
-							href="/app/dashboard/events"
+							href={(events && events) || "/app/dashboard/events"}
 							className={`flex items-center gap-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
 								pathname === DashboardContent.Events
 									? "text-blue-500 bg-gray-100"
@@ -55,7 +72,7 @@ const Sidebar = () => {
 
 			<div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
 				<Link
-					href="/app/dashboard/profile"
+					href={(profile && profile.url) || "/app/dashboard/profile"}
 					className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 w-full ${
 						pathname === DashboardContent.Profile
 							? "text-blue-500 bg-gray-100"
@@ -65,15 +82,19 @@ const Sidebar = () => {
 				>
 					<img
 						alt="Man"
-						src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+						src={
+							(profile && profile.src) ||
+							"https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+						}
 						className="h-10 w-10 rounded-full object-cover"
 					/>
 
 					<div className="overflow-hidden w-full">
 						<p className="text-xs text-start">
-							<strong className="block font-medium">Eric Frusciante</strong>
-
-							<span> eric@frusciante.com </span>
+							<strong className="block font-medium">
+								{(profile && profile.name) || "Eric Frusciante"}
+							</strong>
+							<span>{(profile && profile.email) || "eric@frusciante.com"}</span>
 						</p>
 					</div>
 				</Link>

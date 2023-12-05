@@ -10,38 +10,40 @@ import { ControlTypes } from "@/types";
 interface Props {
 	forms: {
 		title: string;
-		schema: z.ZodObject<any>;
 		desc?: string;
 		onSubmit: (values: any) => Promise<void>;
 		elements: {
 			name: string;
 			label?: string;
-			control: {
-				type: ControlTypes;
-				fields?: any;
-			};
+			// control: {
+			// 	type: ControlTypes;
+			// 	fields?: any;
+			// };
+			control: React.ReactElement;
 			desc?: string;
 		}[];
 	}[];
+	destination?: string;
 }
 
 //todo: what about navbar and footer
 //todo: progress bar
-const PaginatedForm = ({ forms }: Props) => {
+const PaginatedForm = ({ forms, destination }: Props) => {
 	const router = useRouter();
 
 	const [index, setIndex] = useState(0);
 	//todo: animation -> initiate and kill animation state?
 
 	const next = () => {
-		if (index === forms.length - 1) router.replace("/home"); //todo: do something
-		setIndex((prevIndex) => prevIndex + 1);
+		if (index === forms.length - 1) router.replace(destination || "/home");
+		else setIndex((prevIndex) => prevIndex + 1);
 	};
 
 	const back = () => {
 		//todo: create the back button
-		if (index < 0) {}
-	}
+		if (index < 0) {
+		}
+	};
 
 	return (
 		<div className="h-screen flex flex-col">
