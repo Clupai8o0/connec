@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import NextTopLoader from "nextjs-toploader";
+import { CommandBox } from "@/components/navigation/CommandBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
 					/>
 
 					<div className="w-full h-full flex justify-center">{children}</div>
+					<CommandBox />
 				</body>
 			</html>
 		</ClerkProvider>
