@@ -36,74 +36,74 @@ function GetStarted() {
 			<PaginatedForm
 				forms={[
 					//todo: tbf the best approach would instead be through functions
-					// {
-					// 	title: "What should we call you?",
-					// 	onSubmit: async (e: React.FormEvent<HTMLFormElement>) => {
-					// 		// send data to some api to upload that info
-					// 	},
-					// 	elements: [
-					// 		{
-					// 			name: "name",
-					// 			label: "Full Name",
-					// 			control: (
-					// 				<Input placeholder="e.g. John Doe" key={generateKey()} />
-					// 			),
-					// 			desc: "This is the name that will be displayed on your profile",
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	title: "What is your current position",
-					// 	onSubmit: async (values: { pos: string }) => {
-					// 		// send data to some api to upload that info
-					// 	},
-					// 	elements: [
-					// 		{
-					// 			name: "pos",
-					// 			label: "Position",
-					// 			control: (
-					// 				<Input
-					// 					placeholder="e.g. Senior Developer at Facebook"
-					// 					key={generateKey()}
-					// 				/>
-					// 			),
-					// 			desc: "Describe what you do in a single line (Student, CEO, Non-profit worker etc.)",
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	title: "Tell us about yourself",
-					// 	onSubmit: async (values: { bio: string }) => {
-					// 		// send data to some api to upload that info
-					// 	},
-					// 	elements: [
-					// 		{
-					// 			name: "bio",
-					// 			label: "Bio",
-					// 			control: (
-					// 				<Textarea
-					// 					placeholder="Write about yourself here..."
-					// 					className="w-full"
-					// 				/>
-					// 			),
-					// 			desc: "Your bio will be shown on your profile",
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	title: "Show us how you look", //todo: dunno what to do bout this one
-					// 	onSubmit: async (values: { name: string }) => {
-					// 		// send data to some api to upload that info
-					// 	},
-					// 	elements: [
-					// 		{
-					// 			name: "pic",
-					// 			label: "Profile Picture",
-					// 			control: <Input type="file" />,
-					// 			desc: "This is the picture that will be shown on your profile",
-					// 		},
-					// 	],
-					// },
+					{
+						title: "What should we call you?",
+						onSubmit: async (e: React.FormEvent<HTMLFormElement>) => {
+							// send data to some api to upload that info
+						},
+						elements: [
+							{
+								name: "name",
+								label: "Full Name",
+								control: (
+									<Input placeholder="e.g. John Doe" key={generateKey()} />
+								),
+								desc: "This is the name that will be displayed on your profile",
+							},
+						],
+					},
+					{
+						title: "What is your current position",
+						onSubmit: async (values: { pos: string }) => {
+							// send data to some api to upload that info
+						},
+						elements: [
+							{
+								name: "pos",
+								label: "Position",
+								control: (
+									<Input
+										placeholder="e.g. Senior Developer at Facebook"
+										key={generateKey()}
+									/>
+								),
+								desc: "Describe what you do in a single line (Student, CEO, Non-profit worker etc.)",
+							},
+						],
+					},
+					{
+						title: "Tell us about yourself",
+						onSubmit: async (values: { bio: string }) => {
+							// send data to some api to upload that info
+						},
+						elements: [
+							{
+								name: "bio",
+								label: "Bio",
+								control: (
+									<Textarea
+										placeholder="Write about yourself here..."
+										className="w-full"
+									/>
+								),
+								desc: "Your bio will be shown on your profile",
+							},
+						],
+					},
+					{
+						title: "Show us how you look", //todo: dunno what to do bout this one
+						onSubmit: async (values: { name: string }) => {
+							// send data to some api to upload that info
+						},
+						elements: [
+							{
+								name: "pic",
+								label: "Profile Picture",
+								control: <Input type="file" />,
+								desc: "This is the picture that will be shown on your profile",
+							},
+						],
+					},
 					{
 						title: "Final Step", //todo: dunno what to do bout this one
 						desc: "Do any of these categories match your goal?",

@@ -13,52 +13,52 @@ const CreateVenue = () => {
 		<div className="w-full">
 			<PaginatedForm
 				forms={[
-					// {
-					// 	title: "What is the name of your venue?",
-					// 	onSubmit: async (values) => {},
-					// 	elements: [
-					// 		{
-					// 			name: "name",
-					// 			label: "Venue name",
-					// 			control: <Input placeholder="e.g. National Stadium..." />,
-					// 			desc: "Give a catchy name of your venue",
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	title: "Describe your venue",
-					// 	onSubmit: async (values) => {},
-					// 	elements: [
-					// 		{
-					// 			name: "desc",
-					// 			label: "Description",
-					// 			control: <Textarea placeholder="Describe your venue here" />,
-					// 			desc: "This description will appear on your venue once published",
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	title: "Where is your venue located?",
-					// 	onSubmit: async (values) => {},
-					// 	elements: [
-					// 		{
-					// 			name: "address",
-					// 			label: "Address",
-					// 			control: (
-					// 				<Input placeholder="e.g. Building 123 Road 1000 City..." />
-					// 			),
-					// 			desc: "The address should contain all the necessary details",
-					// 		},
-					// 		{
-					// 			name: "map",
-					// 			label: "Google Map",
-					// 			control: (
-					// 				<Textarea placeholder="e.g. <iframe src='https://www.google.com/maps/embed?pb=..." />
-					// 			),
-					// 			desc: "Copy and paste the google map embed here",
-					// 		},
-					// 	],
-					// },
+					{
+						title: "What is the name of your venue?",
+						onSubmit: async (values) => {},
+						elements: [
+							{
+								name: "name",
+								label: "Venue name",
+								control: <Input placeholder="e.g. National Stadium..." />,
+								desc: "Give a catchy name of your venue",
+							},
+						],
+					},
+					{
+						title: "Describe your venue",
+						onSubmit: async (values) => {},
+						elements: [
+							{
+								name: "desc",
+								label: "Description",
+								control: <Textarea placeholder="Describe your venue here" />,
+								desc: "This description will appear on your venue once published",
+							},
+						],
+					},
+					{
+						title: "Where is your venue located?",
+						onSubmit: async (values) => {},
+						elements: [
+							{
+								name: "address",
+								label: "Address",
+								control: (
+									<Input placeholder="e.g. Building 123 Road 1000 City..." />
+								),
+								desc: "The address should contain all the necessary details",
+							},
+							{
+								name: "map",
+								label: "Google Map",
+								control: (
+									<Textarea placeholder="e.g. <iframe src='https://www.google.com/maps/embed?pb=..." />
+								),
+								desc: "Copy and paste the google map embed here",
+							},
+						],
+					},
 					{
 						title: "What does your venue offer",
 						onSubmit: async (values) => {},

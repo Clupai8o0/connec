@@ -1,6 +1,6 @@
 "use client";
 
-import * as z from "zod";
+import { cubicBezier, motion } from "framer-motion";
 
 import FormPage from "./FormPage";
 import { useState } from "react";
@@ -32,11 +32,20 @@ const PaginatedForm = ({ forms, destination }: Props) => {
 	const router = useRouter();
 
 	const [index, setIndex] = useState(0);
-	//todo: animation -> initiate and kill animation state?
+	const [animate, setAnimate] = useState(false);
 
 	const next = () => {
-		if (index === forms.length - 1) router.replace(destination || "/home");
-		else setIndex((prevIndex) => prevIndex + 1);
+		setAnimate(true);
+		const timeout = setTimeout(() => {
+			setAnimate(false);
+			
+			if (index === forms.length - 1) router.replace(destination || "/home");
+			else setIndex((prevIndex) => prevIndex + 1);
+
+			// return () => {
+			// 	clearTimeout(timeout);
+			// };
+		}, 1000);
 	};
 
 	const back = () => {
@@ -46,20 +55,35 @@ const PaginatedForm = ({ forms, destination }: Props) => {
 	};
 
 	return (
-		<div className="h-screen flex flex-col">
+		<div className="h-screen flex flex-col overflow-y-hidden">
 			{/* //todo: https://www.hyperui.dev/components/application-ui/steps -> for steps */}
 			<div className="w-full">
 				<div
-					className={`bg-blue-600 h-1 transition-all duration-300 ease-in-out`}
+					className={`bg-blue-600 h-1 transition-all duration-700 ease-in-out`}
 					style={{
 						width: `${((index + 1) / forms.length) * 100}%`,
 					}}
 				/>
 			</div>
 
-			<div className="max-w-4xl w-full h-full flex items-center mx-auto">
+			<motion.div
+				className="max-w-4xl w-full h-full flex items-center mx-auto"
+				variants={{
+					in: {
+						y: 0,
+						opacity: 1,
+					},
+					out: {
+						y: 24,
+						opacity: 0,
+					},
+				}}
+				initial={animate ? "in" : "out"}
+				animate={animate ? "out" : "in"}
+				transition={{ duration: 0.8, ease: cubicBezier(0.77, 0, 0.18, 1) }}
+			>
 				<FormPage {...forms[index]} next={next} />
-			</div>
+			</motion.div>
 		</div>
 	);
 };
