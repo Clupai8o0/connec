@@ -53,7 +53,7 @@ const FormPage = ({ title, schema, elements, onSubmit, next, desc }: any) => {
 
 			<form onSubmit={handleSubmit} className="space-y-8">
 				{elements.map((element: any) => (
-					<div className="flex flex-col gap-2 w-full">
+					<div className="flex flex-col gap-2 w-full" key={generateKey()}>
 						<label className="small">{element.label}</label>
 						{element.control}
 						<span className="muted">{element.desc}</span>
@@ -61,29 +61,6 @@ const FormPage = ({ title, schema, elements, onSubmit, next, desc }: any) => {
 				))}
 				<Button type="submit">Next</Button>
 			</form>
-
-			{/* <Form {...form}>
-				<form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
-					{elements.map((element: any) => (
-						<FormField
-							key={generateKey()}
-							control={form.control}
-							name={element.name}
-							render={({ field }) => (
-								<FormItem className="flex flex-col">
-									<FormLabel>{element.label}</FormLabel>
-									<FormControl>
-										<ControlInput element={element} field={field} />
-									</FormControl>
-									<FormDescription>{element.desc}</FormDescription>
-									<FormMessage />
-								</FormItem>
-							)}
-						/>
-					))}
-					<Button type="submit">Next</Button>
-				</form>
-			</Form> */}
 		</div>
 	);
 };

@@ -16,6 +16,30 @@ import {
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { generateKey } from "@/lib/api";
+
+const links = [
+	{
+		href: "/app",
+		content: "Dashboard",
+	},
+	{
+		href: "/get-started",
+		content: "Get Started",
+	},
+	{
+		href: "/app/create/venue",
+		content: "Create Venue",
+	},
+	{
+		href: "/app/create/service",
+		content: "Create Service",
+	},
+	{
+		href: "/app/create/event",
+		content: "Create Event",
+	},
+];
 
 export function CommandBox() {
 	const pathname = usePathname();
@@ -43,18 +67,14 @@ export function CommandBox() {
 			<CommandList>
 				<CommandEmpty>No results found.</CommandEmpty>
 				<CommandGroup heading="Suggestions">
-					<Link href="/app">
-						<CommandItem>
-							<ExternalLink className="mr-2 h-4 w-4" />
-							<span>Dashboard</span>
-						</CommandItem>
-					</Link>
-					<Link href="/get-started">
-						<CommandItem>
-							<ExternalLink className="mr-2 h-4 w-4" />
-							<span>Get Started</span>
-						</CommandItem>
-					</Link>
+					{links.map((link) => (
+						<Link href={link.href} key={generateKey()}>
+							<CommandItem>
+								<ExternalLink className="mr-2 h-4 w-4" />
+								<span>{link.content}</span>
+							</CommandItem>
+						</Link>
+					))}
 				</CommandGroup>
 				<CommandSeparator />
 			</CommandList>

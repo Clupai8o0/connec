@@ -1,10 +1,14 @@
-import Services from '@/components/dashboard/Services'
-import React from 'react'
+import Services from "@/components/dashboard/Services";
+import Sidebar from "@/components/dashboard/Sidebar";
+import React from "react";
 
 function ServicesPage() {
-  return (
-    <Services />
-  )
+	return (
+		<>
+			<Sidebar />
+			<Services />
+		</>
+	);
 }
 
-export default ServicesPage
+export default ServicesPage;

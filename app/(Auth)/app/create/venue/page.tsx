@@ -7,6 +7,7 @@ import { ControlTypes } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Price from "@/components/form/Price";
+import { generateKey } from "@/lib/api";
 
 const CreateVenue = () => {
 	return (
@@ -34,6 +35,26 @@ const CreateVenue = () => {
 								label: "Description",
 								control: <Textarea placeholder="Describe your venue here" />,
 								desc: "This description will appear on your venue once published",
+							},
+						],
+					},
+					{
+						title: "Upload some pictures of your venue",
+						onSubmit: async (values) => {},
+						elements: [
+							{
+								name: "venue-pics",
+								label: "Pictures",
+								control: (
+									<div className="flex flex-col gap-2">
+										<Input type="file" />
+										<Input type="file" />
+										<Input type="file" />
+										<Input type="file" />
+										<Input type="file" />
+									</div>
+								),
+								desc: "Upload 5 pictures of your venue each with a unique view",
 							},
 						],
 					},
@@ -73,7 +94,10 @@ const CreateVenue = () => {
 								name: "services",
 								label: "Services",
 								control: (
-									<Textarea placeholder="e.g. 1. Free Wi-Fi..." />
+									<Textarea
+										placeholder="e.g. 1. Free Wi-Fi..."
+										key={generateKey()}
+									/>
 								),
 								desc: "List all the services that your venue will offer",
 							},

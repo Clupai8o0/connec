@@ -17,7 +17,7 @@ import CategoryCard from "@/components/form/CategoryCard";
 
 //todo: check if user has already given important details
 //todo: if they haven't then make them add those details
-function VenueOwnerSetup() {
+function ArtistSetup() {
 	const router = useRouter();
 	const { isLoaded, isSignedIn, user } = useUser();
 
@@ -37,19 +37,19 @@ function VenueOwnerSetup() {
 				forms={[
 					//todo: tbf the best approach would instead be through functions
 					{
-						title: "Final Step",
-            desc: "As a venue owner",
+						title: "Final step",
+            desc: "",
 						onSubmit: async (e: React.FormEvent<HTMLFormElement>) => {
 							// send data to some api to upload that info
 						},
 						elements: [
 							{
-								name: "name",
-								label: "Full Name",
+								name: "appearance",
+								label: "Describe your Appearance",
 								control: (
-									<Input placeholder="e.g. John Doe" key={generateKey()} />
+									<Textarea placeholder="e.g. 170cm Asian..." key={generateKey()} />
 								),
-								desc: "This is the name that will be displayed on your profile",
+								desc: "Describe how you look in person so that people can verify it is you."
 							},
 						],
 					},
@@ -59,4 +59,4 @@ function VenueOwnerSetup() {
 	);
 }
 
-export default VenueOwnerSetup;
+export default ArtistSetup;
