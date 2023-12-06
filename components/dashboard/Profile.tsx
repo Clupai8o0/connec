@@ -8,7 +8,7 @@ interface Props {
 	pfp: string;
 	name: string;
 	title: string;
-	desc: string;
+	desc?: string;
 }
 
 const Profile = ({ pfp, name, title, desc }: Props) => {
