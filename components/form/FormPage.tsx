@@ -47,7 +47,7 @@ const FormPage = ({ title, schema, elements, onSubmit, next, desc }: any) => {
 	}
 
 	return (
-		<div>
+		<div className="w-full">
 			<h1 className="title mb-2">{title}</h1>
 			<p className="text-lg opacity-80 mb-12">{desc}</p>
 

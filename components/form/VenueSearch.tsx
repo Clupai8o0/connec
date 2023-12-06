@@ -1,3 +1,11 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { Input } from "../ui/input";
+import { generateKey } from "@/lib/api";
+import { Search, Star } from "lucide-react";
+import { Button } from "../ui/button";
+
 const VENUES = [
 	{
 		name: "Golden Palace Hotel",
@@ -123,14 +131,92 @@ const VENUES = [
 	},
 ];
 
-const keywords = "g".split(" ");
-let venues = VENUES.filter((venue) => {
-	let valid = false;
-	keywords.forEach((keyword) => {
-		if (venue.name.includes(keyword)) valid = true;
-	});
+const VenueSearch = () => {
+	const [search, setSearch] = useState("");
+	const [venues, setVenues] = useState<typeof VENUES>(VENUES);
+	const [booked, setBooked] = useState("");
 
-	return valid;
-});
+	useEffect(() => {
+		setVenues(
+			VENUES.filter((venue) => {
+				const keywords = search.split(" ");
+				let valid = false;
 
-console.log(venues);
+				keywords.forEach((keyword) => {
+					if (venue.name.toLowerCase().includes(keyword)) valid = true;
+					if (venue.desc.toLowerCase().includes(keyword)) valid = true;
+					if (keyword.includes(String(venue.price.amount))) valid = true;
+					if (venue.price.duration.toLowerCase().includes(keyword))
+						valid = true;
+				});
+
+				venue.services.forEach((service) => {
+					keywords.forEach((keyword) => {
+						if (service.toLowerCase().includes(keyword)) valid = true;
+					});
+				});
+
+				return valid;
+			})
+		);
+	}, [search]);
+
+	return (
+		<div className="border border-gray-200 rounded-md w-full">
+			<div className="flex items-center border-b border-gray-200 px-2">
+				<Search className="w-6 h-6" />
+				<Input
+					placeholder="e.g. Venue with free Wi-Fi..."
+					value={search}
+					onChange={(e) => setSearch(e.target.value)}
+					className="border-0"
+				/>
+			</div>
+
+			<div className="flex flex-col h-[300px] overflow-y-auto w-full">
+				{venues.map((venue) => (
+					<div key={generateKey()} className="flex gap-4 p-4">
+						<img
+							src={`/venue-${Math.floor(Math.random() * 8)+1}.jpg`}
+							alt="venue"
+							className="w-1/3 h-full rounded-md"
+						/>
+
+						<div className="w-1/2 flex flex-col justify-center">
+							<h2 className="subsubheading">{venue.name}</h2>
+							<p>{venue.desc}</p>
+							<p className="muted">
+								Services: {venue.services[0]}, {venue.services[1]},{" "}
+								{venue.services[2]},
+							</p>
+							<div className="flex justify-between">
+								<span className="large">
+									${venue.price.amount} {venue.price.duration}
+								</span>
+								<span className="flex gap-2">
+									<Star fill="true" /> {venue.rating}
+								</span>
+							</div>
+						</div>
+
+						<div className="w-1/6 flex flex-col justify-center gap-2 h-full">
+							<Button
+								className="w-full"
+								variant={(booked === venue.name && "outline") || "default"}
+								disabled={booked === venue.name && true}
+								onClick={() => setBooked(venue.name)}
+							>
+								{booked === venue.name ? "Booked" : "Book Now"}
+							</Button>
+							<Button className="w-full" variant="secondary">
+								Contact
+							</Button>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
+};
+
+export default VenueSearch;
