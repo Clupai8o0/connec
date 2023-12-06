@@ -25,7 +25,7 @@ const Services = () => {
 
 			<div className="flex justify-center items-center flex-col w-full h-full">
 				<h1 className="heading text-gray-700 mb-8">
-					You haven't saved or created any services yet
+					You haven&apos;t saved or created any services yet
 				</h1>
 				<div className="flex gap-2">
 					<Link href="/app/create/service">
