@@ -117,13 +117,13 @@ function GetStarted() {
 								control: (
 									<div className="grid grid-cols-4 w-auto gap-2">
 										<CategoryCard
-											href="/app/dashboard/profile"
+											href="/app/dashboard/profile/prakhar"
 											desc="Do you own any venue and would like to put it up for rent?"
 											label="Venue Owner"
 											src="/venue-owner.jpg"
 										/>
 										<CategoryCard
-											href="/auth/artist"
+											href="/app/dashboard/profile/reem"
 											desc="Are you an artist looking to put together a tour?"
 											label="Artist"
 											src="/artist.jpg"

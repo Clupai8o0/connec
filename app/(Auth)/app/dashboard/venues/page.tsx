@@ -5,7 +5,14 @@ import React from "react";
 function VenuesPage() {
 	return (
 		<>
-			<Sidebar />
+			<Sidebar
+				profile={{
+					title: "Golden Palace Hotle Owner",
+					name: "Prakhar",
+					src: "/prakhar.jpg",
+					url: "/prakhar",
+				}}
+			/>
 			<Venues />
 		</>
 	);

@@ -5,7 +5,14 @@ import React from "react";
 function ServicesPage() {
 	return (
 		<>
-			<Sidebar />
+			<Sidebar
+				profile={{
+					title: "Singer",
+					name: "Reem",
+					src: "/reem.jpg",
+					url: "/reem",
+				}}
+			/>
 			<Services />
 		</>
 	);

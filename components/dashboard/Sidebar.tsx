@@ -11,7 +11,7 @@ interface Props {
 		url: string;
 		src: string;
 		name: string;
-		email: string;
+		title: string;
 	};
 	venues?: string;
 	services?: string;
@@ -94,7 +94,7 @@ const Sidebar = ({
 							<strong className="block font-medium">
 								{(profile && profile.name) || "Eric Frusciante"}
 							</strong>
-							<span>{(profile && profile.email) || "eric@frusciante.com"}</span>
+							<span>{(profile && profile.title) || "Non Profit Worker"}</span>
 						</p>
 					</div>
 				</Link>

@@ -52,6 +52,16 @@ const nextConfig = {
 				destination: "/app/settings",
 				permanent: true,
 			},
+			{
+				source: "/prakhar",
+				destination: "/app/dashboard/profile/prakhar",
+				permanent: true,
+			},
+			{
+				source: "/reem",
+				destination: "/app/dashboard/profile/reem",
+				permanent: true,
+			},
 		];
 	},
 };

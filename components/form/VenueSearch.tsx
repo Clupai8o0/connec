@@ -5,18 +5,33 @@ import { Input } from "../ui/input";
 import { generateKey } from "@/lib/api";
 import { Search, Star } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const VENUES = [
 	{
 		name: "Golden Palace Hotel",
 		desc: "A luxurious hotel with modern amenities and scenic views. Ideal for events, conferences, and accommodation.",
-		services: ["Free WiFi", "Event Planning Assistance", "Catering Services"],
+		services: [
+			"Free WiFi",
+			"Event Planning Assistance",
+			"Catering Services",
+			"Spa and Wellness Facilities",
+			"Concierge Service",
+			"Airport Shuttle",
+			"Room Service",
+			"Fitness Center",
+			"Business Center",
+			"Valet Parking",
+			"Laundry and Dry Cleaning",
+			"Limo/Town Car Service",
+		],
 		price: {
 			amount: 300,
 			currency: "USD",
 			duration: "per night",
 		},
 		rating: 4.7,
+		src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	},
 	{
 		name: "Sunset Gardens Wedding Venue",
@@ -177,13 +192,18 @@ const VenueSearch = () => {
 				{venues.map((venue) => (
 					<div key={generateKey()} className="flex gap-4 p-4">
 						<img
-							src={`/venue-${Math.floor(Math.random() * 8)+1}.jpg`}
+							src={
+								(venue.src && venue.src) ||
+								`/venue-${Math.floor(Math.random() * 8) + 1}.jpg`
+							}
 							alt="venue"
 							className="w-1/3 h-full rounded-md"
 						/>
 
 						<div className="w-1/2 flex flex-col justify-center">
-							<h2 className="subsubheading">{venue.name}</h2>
+							<Link href={`/venue/${generateKey()}`} target="_blank">
+								<h2 className="subsubheading">{venue.name}</h2>
+							</Link>
 							<p>{venue.desc}</p>
 							<p className="muted">
 								Services: {venue.services[0]}, {venue.services[1]},{" "}

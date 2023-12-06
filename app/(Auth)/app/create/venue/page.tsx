@@ -104,7 +104,7 @@ const CreateVenue = () => {
 						],
 					},
 				]}
-				destination="/venue/123"
+				destination={`/venue/${generateKey()}`}
 			/>
 		</div>
 	);

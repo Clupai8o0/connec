@@ -16,14 +16,26 @@ import ServiceCard from "./ServiceCard";
 
 const Services = () => {
 	return (
-		<div className="p-6">
+		<div className="p-6 w-full min-h-screen">
 			{/* <Link href="/app/create/venue">
 				<Button>Create Venue</Button>
 			</Link> */}
 
 			<h1 className="title">Services</h1>
 
-			<div className="mt-4 flex gap-2">
+			<div className="flex justify-center items-center flex-col w-full h-full">
+				<h1 className="heading text-gray-700 mb-8">
+					You haven't saved or created any services yet
+				</h1>
+				<div className="flex gap-2">
+					<Link href="/app/create/service">
+						<Button>Create Service</Button>
+					</Link>
+					<Button variant="ghost">Browse Services</Button>
+				</div>
+			</div>
+
+			{/* <div className="mt-4 flex gap-2">
 				<Select>
 					<SelectTrigger className="w-[180px]">
 						<SelectValue placeholder="Filters" />
@@ -44,9 +56,9 @@ const Services = () => {
 						<SelectItem value="rating">Rating</SelectItem>
 					</SelectContent>
 				</Select>
-			</div>
+			</div> */}
 
-			<div className="flex flex-col gap-8 mt-6">
+			{/* <div className="flex flex-col gap-8 mt-6">
 				<div>
 					<div className="flex justify-between items-center">
 						<div>
@@ -105,7 +117,7 @@ const Services = () => {
 						<ServiceCard />
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

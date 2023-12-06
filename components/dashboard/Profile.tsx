@@ -8,11 +8,12 @@ interface Props {
 	pfp: string;
 	name: string;
 	title: string;
+	desc: string;
 }
 
-const Profile = ({ pfp, name, title }: Props) => {
+const Profile = ({ pfp, name, title, desc }: Props) => {
 	return (
-		<div className="w-full">
+		<div className="w-full min-h-screen">
 			<h1 className="hidden" aria-hidden>
 				Profile
 			</h1>
@@ -40,9 +41,7 @@ const Profile = ({ pfp, name, title }: Props) => {
 
 				<div className="mt-8 flex gap-4">
 					<div>
-						<p className="title font-semibold pb-2">
-							{name}
-						</p>
+						<p className="title font-semibold pb-2">{name}</p>
 						<span className="muted">{title}</span>
 					</div>
 
@@ -58,41 +57,14 @@ const Profile = ({ pfp, name, title }: Props) => {
 			</div>
 
 			<div className="px-12 flex gap-4 mt-6">
-				<div className="w-2/3">
+				<div className="w-full">
 					<div className="flex flex-col gap-4">
 						<h2 className="heading">About</h2>
-						<img
-							src="/about.jpg"
-							alt="underwater somewhere"
-							className="w-full rounded-md h-80 object-cover"
-						/>
-						<p>
-							Meet Evelyn, a vivacious soul wrapped in an aura of creativity and
-							boundless curiosity. With her vibrant mane of auburn curls that
-							cascade down her shoulders, she often pairs her eclectic fashion
-							sense with oversized spectacles that add a touch of whimsy to her
-							look. Evelyn&apos;s passion for storytelling is palpable in every
-							conversation she engages in, her expressive gestures painting
-							vivid pictures as she speaks. An avid traveler and a voracious
-							reader, she carries the world in her heart and the library in her
-							mind, always eager to explore new cultures and delve into
-							uncharted literary realms.
-						</p>
-						<p>
-							Beyond her artistic pursuits, Evelyn possesses a keen intellect
-							and a razor-sharp wit that she wields with kindness. Her laughter
-							echoes through rooms, effortlessly drawing people into her
-							magnetic presence. As an advocate for social causes, she channels
-							her empathy into action, often volunteering her time to support
-							community initiatives and championing inclusivity and equality.
-							Behind her gentle demeanor lies a resilient spirit, forged through
-							life&apos;s trials, which fuels her determination to make a positive
-							impact in the world, one step at a time.
-						</p>
+						<p>{desc}</p>
 					</div>
 				</div>
 
-				<div className="w-1/3 flex flex-col gap-6">
+				{/* <div className="w-1/3 flex flex-col gap-6">
 					<h2 className="heading px-4">Customize Your Profile</h2>
 
 					<div className="rounded-md p-4 bg-gray-50">
@@ -130,7 +102,7 @@ const Profile = ({ pfp, name, title }: Props) => {
 							<Button variant="outline">Learn More</Button>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

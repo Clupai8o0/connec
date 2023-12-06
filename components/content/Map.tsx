@@ -1,6 +1,6 @@
 import { Location } from "@/types";
 
-const Map = ({ google }: Location) => {
+const Map = () => {
 	return (
 		<div className="w-full">
 			<iframe

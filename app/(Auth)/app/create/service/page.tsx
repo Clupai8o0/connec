@@ -99,6 +99,23 @@ const CreateService = () => {
 						],
 					},
 					{
+						title: "Describe your appearance",
+						onSubmit: async (values) => {},
+						elements: [
+							{
+								name: "prev-exp",
+								label: "Appearance",
+								control: (
+									<Textarea
+										placeholder="Describe your apperance here"
+										key={generateKey()}
+									/>
+								),
+								desc: "Describe how you look in person",
+							},
+						],
+					},
+					{
 						title: "What does your service offer?",
 						onSubmit: async (values) => {},
 						elements: [

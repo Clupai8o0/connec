@@ -15,14 +15,26 @@ import {
 
 const Venues = () => {
 	return (
-		<div className="p-6">
+		<div className="p-6 min-h-screen w-full">
 			{/* <Link href="/app/create/venue">
 				<Button>Create Venue</Button>
 			</Link> */}
 
 			<h1 className="title">Venues</h1>
 
-			<div className="mt-4 flex gap-2">
+			<div className="flex justify-center items-center flex-col w-full h-full">
+				<h1 className="heading text-gray-700 mb-8">
+					You haven't saved or created any venues yet
+				</h1>
+				<div className="flex gap-2">
+					<Link href="/app/create/venue">
+						<Button>Create Venue</Button>
+					</Link>
+					<Button variant="ghost">Browse Venues</Button>
+				</div>
+			</div>
+
+			{/* <div className="mt-4 flex gap-2">
 				<Select>
 					<SelectTrigger className="w-[180px]">
 						<SelectValue placeholder="Filters" />
@@ -99,7 +111,7 @@ const Venues = () => {
 						<VenueCard />
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

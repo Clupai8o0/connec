@@ -5,6 +5,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import NextTopLoader from "nextjs-toploader";
 import { CommandBox } from "@/components/navigation/CommandBox";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 

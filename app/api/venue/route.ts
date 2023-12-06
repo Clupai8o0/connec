@@ -21,23 +21,29 @@ export async function GET(req: NextRequest) {
 			id: generateKey(),
 			owner: {
 				id: generateKey(),
-				name: "Jennifer Sterling",
-				title: "President and CEO",
-			}, //? in the future this will only have an id
-			title: "The Ritz-Carlton Bahrain",
-			desc: `Nestled along the captivating shores of Manama, The Ritz-Carlton Bahrain stands as a pinnacle of sophistication and luxury, offering an unparalleled setting for an array of events. With its prime location in the vibrant Seef District, this venue beckons guests with its breathtaking views of the Arabian Gulf, setting the stage for unforgettable moments.
+				name: "Prakhar",
+				title: "Owner of Golden Palace Hotels",
+				src: "/prakhar.jpg",
+			},
+			title: "Golden Palace Hotels",
+			desc: `# Unveiling the Magnificence of Golden Palace Hotel
+In a realm of serenity and grandeur, the Golden Palace Hotel stands tall as an embodiment of sophistication and opulence. Commanding majestic vistas that capture nature's breathtaking beauty, this establishment redefines luxury, promising an indulgent escape amidst spellbinding landscapes.
 
-# Elegant Event Spaces
-The Ritz-Carlton Bahrain showcases a diverse selection of elegant event spaces designed to cater to various occasions. From the grand ballrooms adorned with exquisite chandeliers to the enchanting outdoor terraces overlooking the azure waters, each space is meticulously crafted to provide a blend of opulence and functionality. The versatility of these spaces enables seamless customization, ensuring that every event, whether an intimate gathering or a lavish celebration, is perfectly tailored to meet the client's desires.
+Transcending the ordinary, the Golden Palace Hotel seamlessly merges modernity with refinement. From the resplendent grand foyer to the elegantly appointed rooms, every facet exudes an air of sophistication. Artful design elements blend seamlessly with comfort, ensuring an unmatched stay for every guest.
 
-# Exceptional Services
-At the heart of The Ritz-Carlton Bahrain's allure lies its commitment to providing unparalleled service. A dedicated team of event specialists, including seasoned planners and coordinators, collaborates closely with clients to bring their vision to life. From the initial planning stages to the final execution, every detail is meticulously curated, ensuring a flawless and memorable experience for hosts and guests alike.
+# Unrivaled Amenities and Distinctive Experiences
+Crafted for the elite traveler, the Golden Palace Hotel prides itself on world-class amenities. Each room and suite embodies opulence, featuring sumptuous furnishings, cutting-edge technology, and panoramic vistas that transport guests into realms of tranquility and luxury.
 
-# Gastronomic Excellence
-The culinary offerings at this venue are nothing short of extraordinary. The Ritz-Carlton Bahrain's culinary artisans craft delectable menus that tantalize the taste buds, offering an array of gastronomic delights tailored to each event. Whether it's a sumptuous buffet, an exquisite plated dinner, or bespoke themed cuisine, the culinary team delivers unparalleled excellence, complementing the ambiance and adding an extra layer of sophistication to every gathering.
+# Exquisite Venue for Unforgettable Events
+Beyond a haven for leisure, the hotel sets the stage for unforgettable events and conferences. With versatile, upscale event spaces featuring modern amenities and superior facilities, it offers an ideal setting for prestigious gatherings and sophisticated soirées.
 
-# Impeccable Atmosphere
-Beyond its luxurious facilities and exceptional services, The Ritz-Carlton Bahrain creates an atmosphere of refined elegance and tranquility. The harmonious blend of modern amenities and timeless sophistication, coupled with the warm hospitality of the staff, elevates every event hosted within its walls, leaving a lasting impression on guests.`,
+Nestled amidst a picturesque canvas, the hotel overlooks sprawling vistas of rolling hills and serene lakes. A symphony of nature envelops the senses, inviting guests to revel in tranquility while admiring the breathtaking beauty. Meticulously landscaped gardens further enhance the ambiance of peace and harmony.
+
+At the core of the hotel lies a culinary sanctuary, elevating gastronomic experiences to a realm of artistry. Guests embark on an epicurean journey through a diverse array of dining options, promising flavors that captivate the palate. From gourmet delights to locally inspired cuisines, the hotel's restaurants cater to discerning tastes.
+
+Above all, the Golden Palace Hotel prides itself on unparalleled hospitality. A beacon of warmth and professionalism, each staff member epitomizes dedication, ensuring that every guest receives superlative service. Every need is met with finesse and grace, promising an unforgettable experience.
+
+In conclusion, the Golden Palace Hotel stands as an icon of luxury, where modern elegance harmonizes with natural splendor. It's a sanctuary where guests transcend the ordinary and immerse themselves in an experience that defines luxury, leaving an indelible mark on their memory.`,
 			imgs: [
 				{
 					id: generateKey(),
@@ -70,16 +76,29 @@ Beyond its luxurious facilities and exceptional services, The Ritz-Carlton Bahra
 					"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3477.651113092308!2d50.572061211229006!3d26.211181489289192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49af14f7389d1d%3A0x18da6ea2b6728982!2sNew%20Millennium%20School%20Bahrain!5e0!3m2!1sen!2sbh!4v1699447907079!5m2!1sen!2sbh",
 			},
 			package: {
-				title: "SpectraFields Event Rental Package",
 				price: {
-					per: "hr",
-					value: "$500",
+					per: "night",
+					value: "$300",
 				},
 				desc: `- *Dedicated Event Coordinator:* A professional coordinator to assist in planning and executing events.
 - *Audiovisual Equipment Rental:* Cutting-edge equipment available for presentations and entertainment.
 - *Catering Services:* Customizable menus offering gourmet cuisine for various occasions.
 - *Customizable Event Spaces:* Versatile indoor and outdoor areas suitable for weddings, corporate functions, and private gatherings.`,
-			}, //? for now let's only allow for one package
+				services: [
+					"Free WiFi",
+					"Event Planning Assistance",
+					"Catering Services",
+					"Spa and Wellness Facilities",
+					"Concierge Service",
+					"Airport Shuttle",
+					"Room Service",
+					"Fitness Center",
+					"Business Center",
+					"Valet Parking",
+					"Laundry and Dry Cleaning",
+					"Limo/Town Car Service",
+				],
+			}, 
 			reviews: [
 				{
 					user: {
