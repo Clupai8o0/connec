@@ -53,7 +53,7 @@ async function EventPage({ params: { id } }: { params: { id: string } }) {
 					<Markdown content={event.desc} />
 
 					<h1 className="heading mt-12 mb-6">Location</h1>
-					<Map {...event.location} />
+					<Map />
 
 					{/* <Reviews reviews={event.reviews} /> */}
 				</div>
