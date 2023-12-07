@@ -18,6 +18,46 @@ const types = [
 		value: "non-profit",
 		content: "Non Profit",
 	},
+	{
+		key: generateKey(),
+		value: "concert",
+		content: "Concert",
+	},
+	{
+		key: generateKey(),
+		value: "ceremony",
+		content: "Ceremony",
+	},
+	{
+		key: generateKey(),
+		value: "conference",
+		content: "Conference",
+	},
+	{
+		key: generateKey(),
+		value: "fashion-show",
+		content: "Fashion Show",
+	},
+	{
+		key: generateKey(),
+		value: "festival",
+		content: "Festival",
+	},
+	{
+		key: generateKey(),
+		value: "seminar",
+		content: "Seminar",
+	},
+	{
+		key: generateKey(),
+		value: "wedding",
+		content: "Wedding",
+	},
+	{
+		key: generateKey(),
+		value: "other",
+		content: "Other",
+	},
 ];
 
 const EventType = () => {

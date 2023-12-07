@@ -13,7 +13,42 @@ const types = [
 		value: "singer",
 		content: "Singer",
 	},
-  {
+	{
+		key: generateKey(),
+		value: "catering",
+		content: "Catering",
+	},
+	{
+		key: generateKey(),
+		value: "event-planning",
+		content: "Event Planning",
+	},
+	{
+		key: generateKey(),
+		value: "graphic-design",
+		content: "Graphic Design",
+	},
+	{
+		key: generateKey(),
+		value: "photography",
+		content: "Photography",
+	},
+	{
+		key: generateKey(),
+		value: "security",
+		content: "Security",
+	},
+	{
+		key: generateKey(),
+		value: "sound-lighting",
+		content: "Sound & Lighting",
+	},
+	{
+		key: generateKey(),
+		value: "transportation",
+		content: "Transportation",
+	},
+	{
 		key: generateKey(),
 		value: "other",
 		content: "Other",
