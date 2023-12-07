@@ -20,7 +20,7 @@ export default function ContentLayout({
 			<Banner />
 			<Navbar />
 
-			<main className="mb-12 max-w-[100vw] overflow-hidden w-full h-full flex">
+			<main className="max-w-[100vw] overflow-hidden w-full max-w-screen h-full flex">
 				{children}
 			</main>
 		</div>

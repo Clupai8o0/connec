@@ -21,24 +21,24 @@ export async function GET(req: NextRequest) {
 			id: generateKey(),
 			owner: {
 				id: generateKey(),
-				name: "Jennifer Sterling",
-				title: "President and CEO",
-			}, //? in the future this will only have an id
-			title: "Bahrain International Jazz Festival",
-			desc: `# Celebrating Jazz Rhythms Amidst Bahrain's Splendor
-The Bahrain International Jazz Festival returns to Bahrain Bay Park, promising an unforgettable evening dedicated to the timeless and soulful melodies of jazz. This vibrant event unites passionate jazz enthusiasts and music aficionados for a night of enchanting performances and musical discovery.
+				name: "Reem",
+				title: "Singer",
+				src: "/reem.jpg",
+			},
+			title: "Harmonious Reverie: Reem's Melodic Voyage",
+			desc: `Harmonious Reverie: Reem's Melodic Voyage invites you to an unforgettable evening of musical enchantment. Set amidst the opulent grandeur of the city's renowned concert hall, the event promises an immersive experience that blends sophistication with the raw emotion of live music.
 
-# Captivating Performances by World-Class Artists
-Experience the magic of live jazz with captivating performances by an eclectic lineup of acclaimed international jazz musicians. From smooth melodies to upbeat rhythms, witness the versatility and innovation of this beloved genre showcased by both seasoned jazz legends and emerging talents.
+As the sun sets and the venue glimmers with ambient lights, guests are welcomed into a world where melodies become memories. Reem, a vocal virtuoso known for her emotive performances, takes center stage, her voice echoing through the hall, captivating every soul present.
 
-# Local Talent Spotlight
-In addition to international acts, the festival proudly highlights Bahrain's vibrant jazz scene, providing a platform for local jazz musicians to showcase their talent. Experience the rich tapestry of jazz interpretations, reflecting the region's unique musical influences and cultural diversity.
+The concert's program is meticulously curated, showcasing Reem's versatility with a repertoire that traverses through time and genres. From timeless classics that evoke nostalgia to contemporary chart-toppers, each song is woven with passion and precision, inviting the audience on an emotional rollercoaster.
 
-# Immersive Outdoor Setting
-The enchanting Bahrain Bay Park serves as the perfect backdrop for this musical extravaganza. Amidst the serene waterfront and lush greenery, attendees can revel in the ambiance, socialize, and delight in the communal celebration of jazz music under the starlit sky.
+Elevating the auditory journey, a symphony orchestra, and a small ensemble of renowned musicians accompany Reem, enriching the melodies with harmonies that resonate through the hall. Visual spectacles of lights and subtle stage effects complement the music, creating a multisensory experience that transcends mere entertainment.
 
-# Culinary Delights and Artisanal Crafts
-Explore a variety of culinary offerings from local vendors offering delectable cuisines and beverages. Indulge in gourmet delights while browsing through artisanal crafts and merchandise available at the festival, adding to the holistic experience of the event.`,
+During intermissions, guests indulge in a curated selection of refreshments, mingling in the venue's elegantly adorned foyer. Engaging with fellow music enthusiasts, they share in the anticipation of the performances yet to unfold.
+
+The evening culminates in a crescendo of emotions as Reem delivers a powerful finale, leaving the audience spellbound. A standing ovation fills the hall, echoing gratitude for an evening that surpassed expectations.
+
+Harmonious Reverie: Reem's Melodic Voyage is not just a concert; it's an immersive journey through emotions, artistry, and the unifying power of music. A night where melodies intertwine with memories, leaving an indelible mark on every heart fortunate enough to be part of this transcendent experience.`,
 			imgs: [
 				{
 					id: generateKey(),
@@ -73,14 +73,14 @@ Explore a variety of culinary offerings from local vendors offering delectable c
 			package: {
 				title: "SpectraFields Event Rental Package",
 				price: {
-					general: "$25",
-					vip: "$60",
+					general: "$10",
+					vip: "$25",
 				},
-				desc: "The Bahrain International Jazz Festival invites all music enthusiasts to join in and immerse themselves in an evening filled with the soulful harmonies and captivating rhythms of jazz, promising an unforgettable experience in the heart of Bahrain's cultural tapestry.",
-				duration: "6 hours",
-				date: "15 April, 2023",
-				time: "5:00 P.M. to 11:00 P.M."
-			}, //? for now let's only allow for one package
+				desc: "Experience the captivating Harmonious Reverie: Reem's Melodic Voyage! General tickets at $10 and VIP tickets at $25. Join us for an enchanting evening of soul-stirring melodies and emotive performances. Limited seats available!",
+				duration: "4 hours",
+				date: "10 December, 2023",
+				time: "6:00 P.M. to 10:00 P.M.",
+			},
 		};
 
 		return handleSuccess("Works ig", data);

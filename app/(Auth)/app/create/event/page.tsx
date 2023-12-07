@@ -121,10 +121,15 @@ const CreateEvent = () => {
 								control: <Input placeholder="$0" className="w-[150px]"/>,
 								desc: "The price for your VIP tickets. Leave empty if you don't plan to have them."
 							},
+							{
+								name: "desc",
+								label: "Description",
+								control: <Textarea placeholder="Write a final ticket description for your event" />
+							}
 						],
 					},
 				]}
-				destination="/app/dashboard/events/123"
+				destination={`/app/dashboard/events/${generateKey()}`}
 			/>
 		</div>
 	);

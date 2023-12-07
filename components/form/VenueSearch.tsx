@@ -53,7 +53,7 @@ const VENUES = [
 		desc: "State-of-the-art conference facility equipped with advanced technology. Ideal for corporate events and seminars.",
 		services: [
 			"Audiovisual Equipment",
-			"High-speed Internet",
+			"Hgh-speed Internet",
 			"Catering Options",
 		],
 		price: {

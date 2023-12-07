@@ -16,7 +16,7 @@ import ServiceCard from "./ServiceCard";
 
 const Services = () => {
 	return (
-		<div className="p-6 w-full min-h-screen">
+		<div className="p-6 w-full min-h-[90vh]">
 			{/* <Link href="/app/create/venue">
 				<Button>Create Venue</Button>
 			</Link> */}

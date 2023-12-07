@@ -4,8 +4,23 @@ import Markdown from "@/components/content/Markdown";
 import Footer from "@/components/navigation/Footer";
 import Navbar from "@/components/navigation/Navbar";
 import { Button } from "@/components/ui/button";
+import { createClient } from "@supabase/supabase-js";
+import { useRouter } from "next/navigation";
 
 function ContractPage() {
+	const client = createClient(
+		process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+		process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+	);
+	const router = useRouter();
+
+	const handleAccept = async () => {
+		await client.from("contract").update({
+			verified: true
+		}).eq("code", "123")
+		router.push("/home");
+	};
+
 	return (
 		<div className="flex flex-col w-full">
 			<Navbar />
@@ -13,20 +28,19 @@ function ContractPage() {
 				<h1 className="title mt-12">Contract</h1>
 				<h2 className="heading mt-6">About Event</h2>
 				<Markdown
-					content={`# Celebrating Jazz Rhythms Amidst Bahrain's Splendor
-The Bahrain International Jazz Festival returns to Bahrain Bay Park, promising an unforgettable evening dedicated to the timeless and soulful melodies of jazz. This vibrant event unites passionate jazz enthusiasts and music aficionados for a night of enchanting performances and musical discovery.
+					content={`Harmonious Reverie: Reem's Melodic Voyage invites you to an unforgettable evening of musical enchantment. Set amidst the opulent grandeur of the city's renowned concert hall, the event promises an immersive experience that blends sophistication with the raw emotion of live music.
 
-# Captivating Performances by World-Class Artists
-Experience the magic of live jazz with captivating performances by an eclectic lineup of acclaimed international jazz musicians. From smooth melodies to upbeat rhythms, witness the versatility and innovation of this beloved genre showcased by both seasoned jazz legends and emerging talents.
+As the sun sets and the venue glimmers with ambient lights, guests are welcomed into a world where melodies become memories. Reem, a vocal virtuoso known for her emotive performances, takes center stage, her voice echoing through the hall, captivating every soul present.
 
-# Local Talent Spotlight
-In addition to international acts, the festival proudly highlights Bahrain's vibrant jazz scene, providing a platform for local jazz musicians to showcase their talent. Experience the rich tapestry of jazz interpretations, reflecting the region's unique musical influences and cultural diversity.
+The concert's program is meticulously curated, showcasing Reem's versatility with a repertoire that traverses through time and genres. From timeless classics that evoke nostalgia to contemporary chart-toppers, each song is woven with passion and precision, inviting the audience on an emotional rollercoaster.
 
-# Immersive Outdoor Setting
-The enchanting Bahrain Bay Park serves as the perfect backdrop for this musical extravaganza. Amidst the serene waterfront and lush greenery, attendees can revel in the ambiance, socialize, and delight in the communal celebration of jazz music under the starlit sky.
+Elevating the auditory journey, a symphony orchestra, and a small ensemble of renowned musicians accompany Reem, enriching the melodies with harmonies that resonate through the hall. Visual spectacles of lights and subtle stage effects complement the music, creating a multisensory experience that transcends mere entertainment.
 
-# Culinary Delights and Artisanal Crafts
-Explore a variety of culinary offerings from local vendors offering delectable cuisines and beverages. Indulge in gourmet delights while browsing through artisanal crafts and merchandise available at the festival, adding to the holistic experience of the event.`}
+During intermissions, guests indulge in a curated selection of refreshments, mingling in the venue's elegantly adorned foyer. Engaging with fellow music enthusiasts, they share in the anticipation of the performances yet to unfold.
+
+The evening culminates in a crescendo of emotions as Reem delivers a powerful finale, leaving the audience spellbound. A standing ovation fills the hall, echoing gratitude for an evening that surpassed expectations.
+
+Harmonious Reverie: Reem's Melodic Voyage is not just a concert; it's an immersive journey through emotions, artistry, and the unifying power of music. A night where melodies intertwine with memories, leaving an indelible mark on every heart fortunate enough to be part of this transcendent experience.`}
 				/>
 				<h2 className="heading mt-6">Expected of the venue owner</h2>
 				<Markdown
@@ -48,10 +62,14 @@ Overall, the venue owner's role is crucial in creating an immersive, safe, and e
 				/>
 
 				<h2 className="heading mt-6">Important Details</h2>
-				<div></div>
+				<div>
+					<p>Time: 6:00 P.M. to 10:00 P.M.</p>
+					<p>Date: 10 December, 2023</p>
+					<p className="large">Total: $300</p>
+				</div>
 
-				<div className="flex gap-2">
-					<Button>Accept</Button>
+				<div className="flex gap-2 mt-6">
+					<Button onClick={handleAccept}>Accept</Button>
 					<Button variant="destructive">Refuse</Button>
 					<Button variant="secondary">Contact</Button>
 				</div>

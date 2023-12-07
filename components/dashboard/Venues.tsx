@@ -15,7 +15,7 @@ import {
 
 const Venues = () => {
 	return (
-		<div className="p-6 min-h-screen w-full">
+		<div className="p-6 min-h-[90vh] w-full">
 			{/* <Link href="/app/create/venue">
 				<Button>Create Venue</Button>
 			</Link> */}

@@ -7,7 +7,7 @@ function VenuesPage() {
 		<>
 			<Sidebar
 				profile={{
-					title: "Golden Palace Hotle Owner",
+					title: "Golden Palace Hotel Owner",
 					name: "Prakhar",
 					src: "/prakhar.jpg",
 					url: "/prakhar",

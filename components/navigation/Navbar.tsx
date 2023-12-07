@@ -19,6 +19,7 @@ import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Notification from "./Notification";
 
 // const darkModePages = ["/"];
 
@@ -120,6 +121,7 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 				</div>
 
 				<div className="flex gap-4 items-center">
+					<Notification />
 					<SignedOut>
 						<Link href="/auth/sign-in">
 							<Button variant="link">Login</Button>

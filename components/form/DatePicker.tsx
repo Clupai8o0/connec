@@ -18,8 +18,8 @@ export default function DatePicker({
 	className,
 }: React.HTMLAttributes<HTMLDivElement>) {
 	const [date, setDate] = React.useState<DateRange | undefined>({
-		from: new Date(2022, 0, 20),
-		to: addDays(new Date(2022, 0, 20), 20),
+		from: new Date(2023, 12, 7),
+		to: addDays(new Date(2023, 12, 7), 7),
 	});
 
 	return (
