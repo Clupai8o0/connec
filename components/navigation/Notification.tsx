@@ -53,7 +53,7 @@ function Notification() {
 						<div className="flex flex-col">
 							<h1 className="large">Venue Request</h1>
 							<h2 className="muted">
-								Harmonious Reverie: Reem's Melodic Voyage
+								Harmonious Reverie: Reem&apos;s Melodic Voyage
 							</h2>
 						</div>
 					</Link>
