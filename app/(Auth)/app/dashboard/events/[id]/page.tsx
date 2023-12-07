@@ -97,7 +97,7 @@ function DashboardEventPage() {
 					{/* //todo: missing an average review and other details */}
 					<div className="w-full">
 						<h1 className="title mt-12 mb-6">
-							Harmonious Reverie: Reem's Melodic Voyage
+							Harmonious Reverie: Reem&apos;s Melodic Voyage
 						</h1>
 
 						<Markdown
