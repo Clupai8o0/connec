@@ -10,6 +10,11 @@ import { generateKey } from "@/lib/api";
 const types = [
 	{
 		key: generateKey(),
+		value: "exhibition",
+		content: "Exhibition",
+	},
+	{
+		key: generateKey(),
 		value: "party",
 		content: "Party",
 	},

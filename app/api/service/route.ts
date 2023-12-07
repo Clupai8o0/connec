@@ -22,61 +22,68 @@ export async function GET(req: NextRequest) {
 			owner: {
 				id: generateKey(),
 				name: "Reem",
-				title: "Singer",
+				title: "Artist",
 				src: "/reem.jpg",
 			},
-			title: "Crafting Unforgettable Musical Moments",
-			desc: `Hello, I'm Reem, a renowned singer offering a personalized musical service crafted to enhance the essence of any event. My passion lies in captivating audiences with the soulful resonance of my voice, tailoring enchanting performances for various occasions.
+			title: "Live Painter",
+			desc: `# Elevate Your Event with Live Artistry
 
-# Versatile Repertoire
+I am a live painter, specializing in transforming events into artistic experiences. My unique service adds an interactive and visually captivating element, turning any occasion into a memorable and creative affair.
 
-My musical journey spans diverse genres—pop, jazz, R&B, and classical tunes. This versatility allows me to curate immersive experiences, ensuring that weddings, corporate gatherings, private parties, and more, are adorned with the perfect melodies.
+Live Painting Sessions:
+At your event, I set up my easel and canvas, engaging guests with a mesmerizing live painting session. As the event unfolds, I translate the ambiance, energy, or chosen themes into a captivating visual masterpiece.
 
-Collaborating closely with event planners and clients, I personalize each performance to align with the unique ambiance of the occasion. Whether it's crafting custom playlists or accommodating special song requests, I ensure the music harmonizes seamlessly with the event's vibe.
+# Customized Artwork
 
-# Impeccable Delivery
+Clients have the opportunity to request specific subjects, moments, or themes they wish to be immortalized on canvas during the event. This customization ensures a personalized touch that resonates with the occasion.
 
-Priding myself on professionalism, I arrive fully equipped with top-tier sound systems, delivering a flawless auditory journey. My commitment to excellence guarantees an immersive performance that captivates audiences through emotive renditions.
+Guests are invited to witness the creative process firsthand, offering suggestions or simply observing as the artwork evolves. This interactive engagement fosters a sense of involvement and curiosity among attendees.
 
-My aim is to leave an enduring mark on every event. I strive to create memories that linger, infusing each moment with musical magic that lingers long after the performance concludes.
+# Finished Masterpiece Presentation
+Upon the event's conclusion, I present a near-complete or finished artwork. This stunning piece serves as a unique keepsake or a striking display for hosts or guests, encapsulating the essence of the event.
 
-My dedication lies in infusing passion, professionalism, and musical finesse into every performance. By crafting captivating melodies, I aim to ensure that each occasion becomes an unforgettable and cherished experience.`,
-			prev: `# Early Foundations:
-Reem's passion for music ignited in her youth, fostering an early love for melodies. Through dedicated practice and training, she cultivated her innate talent, laying the groundwork for a promising musical career.
+My live painting session adds a unique entertainment aspect to events, providing guests with an engaging visual experience that transcends conventional event activities.
 
-Commencing with grassroots performances, Reem captivated audiences with her emotive voice and magnetic stage presence. These intimate settings provided fertile ground for honing her craft and establishing a connection with diverse crowds.
+The artwork becomes a cherished memento, encapsulating the vibrancy and spirit of the event in a tangible, lasting form. It serves as a meaningful keepsake for hosts or attendees alike.
 
-Collaborations with established musicians and production houses expanded Reem's musical horizons. Working across genres and styles, these partnerships shaped her into a versatile artist, amplifying her ability to adapt to various musical environments.
+I seamlessly integrate into various event spaces, ensuring that my artistic corner complements the event's ambiance without disrupting the flow of activities.
 
-# Performance Pinnacle:
-Gaining acclaim, Reem found herself at prestigious events, weddings, corporate functions, and cultural festivals. Her adaptability and vocal finesse allowed her to seamlessly blend into each event's unique atmosphere, leaving lasting impressions.
+My goal is to enrich events with creativity, transforming moments into art and leaving guests captivated by the live creation of a masterpiece that encapsulates the essence of their experience.`,
+			prev: `# Early Beginnings:
+My passion for painting ignited at a young age, leading me on an artistic journey that merged with events. Through dedicated practice and creative exploration, I honed my skills as an artist, culminating in a seamless fusion of art and live experiences.
 
-# Studio Sojourns:
-Venturing into recording studios, Reem lent her vocals to commercials, music albums, and collaborations. Studio work fine-tuned her artistry, refining her voice and technique for a broader array of musical endeavors.`,
+Commencing with local exhibitions and showcases, I gained recognition for my live painting prowess. These initial experiences allowed me to refine my techniques and connect intimately with diverse audiences, painting scenes that mirrored the event's ambiance.
+
+Collaborations with event organizers and notable venues broadened my artistic horizons. Working across various event types—weddings, galas, corporate functions—I adapted my artistry to diverse themes and settings, mastering the live painting process.
+
+# Event Highlights:
+My journey led to live painting at prestigious events, where I captured pivotal moments on canvas. From commemorating weddings with intimate portraits to visually capturing the energy of concerts, each event contributed to my evolving expertise.
+
+Constantly exploring new styles and approaches, my live painting evolved into an interactive performance. I engaged with guests, translating their stories and emotions onto canvas, creating bespoke artworks that resonated deeply.`,
 			imgs: [
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1473396413399-6717ef7c4093?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1589996448606-27d38c70f3bc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "A fuking desert",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1487954335942-047e6d1551ee?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "A mermaid",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1487954277007-8c2d6710c312?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1532892643659-9034b26e8cce?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "Another fuking desert",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1475527588268-e6a157656e35?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1596548438137-d51ea5c83ca5?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "Cool landscape",
 				},
 				{
 					id: generateKey(),
-					src: "https://images.unsplash.com/photo-1468392788711-903a924761a6?q=80&w=1487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					src: "https://images.unsplash.com/photo-1590853566724-83bc9da30d15?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 					alt: "A fuking plant",
 				},
 			],
@@ -90,11 +97,11 @@ Venturing into recording studios, Reem lent her vocals to commercials, music alb
 					per: "hr",
 					value: "$20",
 				},
-				desc: `- *Live Performances:* Engaging live musical performances tailored to the event's ambiance, encompassing diverse genres such as pop, jazz, R&B, or classical music.
+				desc: `- *Live Painting Sessions:* I set up my easel and canvas at the event, creating an engaging visual spectacle as I paint the scene, ambiance, or focal points live.
 
-- *Customized Setlists:* Collaborative creation of personalized playlists to suit the tone and preferences of the event, ensuring a seamless blend of songs that resonate with the audience.
+- *Customized Artwork:* Clients can request specific themes, subjects, or moments they want immortalized on canvas during the event, ensuring a personalized touch.
 
-- *Song Requests:* Accommodation of specific song requests from clients or attendees, adding a personalized touch to the performance and enhancing audience engagement.`,
+- *Interactive Experience:* Guests can witness the creation process, interact, and even contribute ideas, fostering a sense of involvement and curiosity.`,
 			}, //? for now let's only allow for one package
 			reviews: [
 				{

@@ -33,7 +33,7 @@ async function EventPage({ params: { id } }: { params: { id: string } }) {
 			<div className="w-full flex flex-col md:flex-row gap-2 overflow-hidden rounded-2xl">
 				<div className="w-full h-[400px] relative">
 					<NextImage
-						src="/singer.jpg"
+						src="/painter.jpg"
 						key="162iu1bkjna"
 						alt="Some jazz"
 						fill

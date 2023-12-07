@@ -38,17 +38,17 @@ const venue = {
 };
 
 const service = {
-	name: "Crafting Unforgettable Musical Moments",
-	desc: "Hello, I'm Reem, a renowned singer offering a personalized musical service crafted to enhance the essence of any event. My passion lies in captivating audiences with the soulful resonance of my voice, tailoring enchanting performances for various occasions.",
+	name: "Live Painter",
+	desc: "I am a live painter, specializing in transforming events into artistic experiences. My unique service adds an interactive and visually captivating element, turning any occasion into a memorable and creative affair.",
 	profile: {
 		name: "Reem",
 		profilePicture: "/reem.jpg",
-		title: "Singer",
-		src: "/reem.jpg"
+		title: "Live Painter",
+		src: "/reem.jpg",
 	},
 	price: 20,
 	rating: 4.9,
-	src:"/singer.jpg"
+	src: "/painter.jpg",
 };
 
 async function EventPage({ params: { id } }: { params: { id: string } }) {
@@ -65,7 +65,7 @@ async function EventPage({ params: { id } }: { params: { id: string } }) {
 			<div className="w-full flex flex-col md:flex-row gap-2 overflow-hidden rounded-2xl">
 				<div className="w-full h-[400px] relative">
 					<NextImage
-						src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 						key="162iu1bkjna"
 						alt="Some jazz"
 						fill

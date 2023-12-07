@@ -121,7 +121,6 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 				</div>
 
 				<div className="flex gap-4 items-center">
-					<Notification />
 					<SignedOut>
 						<Link href="/auth/sign-in">
 							<Button variant="link">Login</Button>
@@ -131,6 +130,7 @@ const Navbar = ({ darkMode, absolute }: Props) => {
 						</Link>
 					</SignedOut>
 					<SignedIn>
+						<Notification />
 						{/* //todo: change this btw */}
 						<Link href="/app/dashboard/profile">
 							<Button>Dashboard</Button>

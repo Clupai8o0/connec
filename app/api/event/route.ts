@@ -22,23 +22,26 @@ export async function GET(req: NextRequest) {
 			owner: {
 				id: generateKey(),
 				name: "Reem",
-				title: "Singer",
+				title: "Live Painter",
 				src: "/reem.jpg",
 			},
-			title: "Harmonious Reverie: Reem's Melodic Voyage",
-			desc: `Harmonious Reverie: Reem's Melodic Voyage invites you to an unforgettable evening of musical enchantment. Set amidst the opulent grandeur of the city's renowned concert hall, the event promises an immersive experience that blends sophistication with the raw emotion of live music.
+			title: "Art Exhibition",
+			desc: `Welcome to "Unveiling Masterpieces," an exquisite art exhibition that invites you on a visual journey through captivating artistic expressions. This exhibition showcases an eclectic array of artworks from renowned local and international artists.
 
-As the sun sets and the venue glimmers with ambient lights, guests are welcomed into a world where melodies become memories. Reem, a vocal virtuoso known for her emotive performances, takes center stage, her voice echoing through the hall, captivating every soul present.
+# Diverse Artistic Repertoire:
+Immerse yourself in a diverse tapestry of artistic styles, from contemporary abstracts to classical portraits, ensuring a rich and varied experience for art enthusiasts and collectors alike.
 
-The concert's program is meticulously curated, showcasing Reem's versatility with a repertoire that traverses through time and genres. From timeless classics that evoke nostalgia to contemporary chart-toppers, each song is woven with passion and precision, inviting the audience on an emotional rollercoaster.
+# Featured Artists:
+Discover the visions of both established and emerging artists, each piece a reflection of their unique perspectives and creative narratives. Our exhibition proudly presents a curated selection that encompasses a spectrum of emotions and techniques.
 
-Elevating the auditory journey, a symphony orchestra, and a small ensemble of renowned musicians accompany Reem, enriching the melodies with harmonies that resonate through the hall. Visual spectacles of lights and subtle stage effects complement the music, creating a multisensory experience that transcends mere entertainment.
+The exhibition's thematic approach invites contemplation and introspection, exploring themes of identity, nature, societal reflections, and the human condition. Each artwork serves as a window into the artist's soul, inviting interpretation and discourse.
 
-During intermissions, guests indulge in a curated selection of refreshments, mingling in the venue's elegantly adorned foyer. Engaging with fellow music enthusiasts, they share in the anticipation of the performances yet to unfold.
+# Interactive Engagement:
+Engage with the art on a deeper level through interactive sessions led by curators or artists themselves. Gain insights into the creative process, inspirations, and stories behind the masterpieces displayed.
 
-The evening culminates in a crescendo of emotions as Reem delivers a powerful finale, leaving the audience spellbound. A standing ovation fills the hall, echoing gratitude for an evening that surpassed expectations.
+Participate in enlightening discussions and workshops, fostering artistic dialogues among attendees, artists, and experts. Delve into the world of artistry, exploring techniques, influences, and the ever-evolving art landscape.
 
-Harmonious Reverie: Reem's Melodic Voyage is not just a concert; it's an immersive journey through emotions, artistry, and the unifying power of music. A night where melodies intertwine with memories, leaving an indelible mark on every heart fortunate enough to be part of this transcendent experience.`,
+Be captivated by specially curated installations and highlight pieces strategically placed to evoke emotional resonance and aesthetic appreciation. Witness the convergence of creativity and innovation.`,
 			imgs: [
 				{
 					id: generateKey(),
@@ -76,7 +79,7 @@ Harmonious Reverie: Reem's Melodic Voyage is not just a concert; it's an immersi
 					general: "$10",
 					vip: "$25",
 				},
-				desc: "Experience the captivating Harmonious Reverie: Reem's Melodic Voyage! General tickets at $10 and VIP tickets at $25. Join us for an enchanting evening of soul-stirring melodies and emotive performances. Limited seats available!",
+				desc: "Experience the captivating Art Exhibition General tickets at $10 and VIP tickets at $25. Join us for an enchanting evening of soul-stirring artwork and emotive performances. Limited tickets available!",
 				duration: "4 hours",
 				date: "10 December, 2023",
 				time: "6:00 P.M. to 10:00 P.M.",
